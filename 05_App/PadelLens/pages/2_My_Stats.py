@@ -194,6 +194,53 @@ with r2c2:
         f"Annotation guides the user: the drop is the editorial focus, not the "
         f"raw bars. 2-set: {two_wr}; 3-set: {three_wr}.")
 
+# ---- Personal Elo rating (same engine as the pro Insights page)
+st.write("")
+st.markdown("##### Your Elo rating")
+elo_log = load_my_matches()  # full history: Elo is cumulative, so it ignores the time filter
+if len(elo_log) >= 10:
+    opp = elo_log["opponents"].str.split(" & ", expand=True)
+    elo_input = pd.DataFrame({
+        "match_id": elo_log["match_id"] if "match_id" in elo_log else range(1, len(elo_log) + 1),
+        "date": elo_log["date"],
+        "team1_p1": player_name,
+        "team1_p2": elo_log["partner"],
+        "team2_p1": opp[0].fillna("Opponent A"),
+        "team2_p2": (opp[1] if opp.shape[1] > 1 else pd.Series(dtype=str)).fillna("Opponent B"),
+        "winner_team": (elo_log["result"] == "W").map({True: 1, False: 2}),
+    })
+    from analytics import compute_elo
+    elo_hist, elo_final = compute_elo(elo_input)
+    me_hist = elo_hist[elo_hist["player"] == player_name].sort_values("date")
+    me_now = float(elo_final.loc[elo_final["player"] == player_name, "elo"].iloc[0])
+    ec1, ec2 = st.columns([1, 3])
+    with ec1:
+        kpi("Current Elo", f"{me_now:.0f}", f"start 1500 · {len(me_hist)} matches")
+    with ec2:
+        fig = go.Figure()
+        fig.add_trace(go.Scatter(x=me_hist["date"], y=me_hist["elo_after"],
+                                 mode="lines+markers", line=dict(color=BLUE, width=2),
+                                 marker=dict(size=5), name="Your Elo"))
+        fig.add_hline(y=1500, line_dash="dot", line_color=MUTED,
+                      annotation_text="start 1500", annotation_font_size=10)
+        fig.update_layout(height=220, margin=dict(l=10, r=10, t=10, b=10),
+                          yaxis_title="Elo", showlegend=False)
+        st.plotly_chart(themed_fig(fig), use_container_width=True,
+                        config={"displayModeBar": False})
+    with st.expander("Elo of everyone in your match log"):
+        tbl = elo_final.sort_values("elo", ascending=False).reset_index(drop=True)
+        tbl.index += 1
+        tbl["elo"] = tbl["elo"].round(0).astype(int)
+        st.dataframe(tbl.rename(columns={"player": "Player", "elo": "Elo",
+                                          "n_matches": "Matches"}),
+                     use_container_width=True, height=260)
+    section_caption(
+        "Same Elo engine as the pro Insights page (K=32, start 1500), run on your "
+        "own log - the analytics layer is dataset-agnostic. With a small log, "
+        "treat Elo as a trend indicator, not a precise rating.")
+else:
+    st.info("Elo needs at least 10 logged matches to be meaningful. Log more matches to unlock it.")
+
 # ---- Match table at the bottom
 st.write("")
 st.markdown("##### All matches in current view")
