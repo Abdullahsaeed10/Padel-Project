@@ -228,6 +228,18 @@ def render_elo_vs_ranking(pro_matches: pd.DataFrame, pro_players: pd.DataFrame):
     st.plotly_chart(themed_fig(fig), use_container_width=True,
                     config={"displayModeBar": False})
 
+    with st.expander("View the full Elo ranking table"):
+        table = merged.sort_values("elo", ascending=False).reset_index(drop=True)
+        table.index = table.index + 1
+        table = table[["player", "elo", "n_matches", "ranking_points"]].rename(columns={
+            "player": "Player", "elo": "Elo", "n_matches": "Matches",
+            "ranking_points": "Official points"})
+        table["Elo"] = table["Elo"].round(1)
+        st.dataframe(table, use_container_width=True, height=420)
+        st.caption("Elo computed from 2026 season results only (K=32, start 1500). "
+                   "Partners in a stable pair share the same Elo by construction - "
+                   "they win and lose together.")
+
 
 def render_chemistry(pro_matches: pd.DataFrame, pro_players: pd.DataFrame):
     pc = analytics.pair_chemistry(pro_matches)
