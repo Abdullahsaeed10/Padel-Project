@@ -28,7 +28,7 @@ updated, so you can see exactly where the improvements landed as we go."
 "Before I dive back into the full story, here's the honest one-slide summary. Six things changed
 since the 21-out-of-30 first submission: a real 776-match dataset instead of a small demo pull;
 genuine exploration that surfaced seven findings, including an honest null; a new analytics layer
-with Elo, a win model, clustering, and confidence intervals; an upgraded multi-user app with a new
+with Elo, a win model, and confidence intervals; an upgraded multi-user app with a new
 Insights page; validation instruments that are ready, with sessions scheduled; and a polished,
 machine-verified deck. Keep an eye on the badges from here — they mark exactly where."
 
@@ -115,7 +115,7 @@ durations."
 equals one over one plus e to the negative of beta-zero plus beta-one times the log of the points
 ratio — AUC zero point eighty-eight. The Elo engine: expected score is one over one plus ten to
 the rating difference over four hundred, updated by K times actual minus expected score, K equal
-to thirty-two, unit-tested zero-sum. K-means groups players into shot archetypes. All three live
+to thirty-two, unit-tested zero-sum. All three live
 in analytics.py, twelve of twelve tests passing."
 
 **Slide 17 — 2.7 Findings — Momentum & Chemistry** · **[NEW]** · ~1:10
@@ -230,8 +230,7 @@ run_app.bat installs, builds the database, and launches the app in one step."
 
 **Slide 36 — 5.2 The Analytics Module** · **[NEW]** · ~1:05
 "This module didn't exist before — no modelling or analytical tooling was a direct criticism. Now
-there's an Elo engine over all 776 real matches, a logistic win model with calibration, k-means
-player archetypes, and Wilson confidence intervals on every win rate. A small-n guard means fewer
+there's an Elo engine over all 776 real matches, a logistic win model with calibration, and Wilson confidence intervals on every win rate. A small-n guard means fewer
 than ten matches behind a stat, and the app refuses to claim anything."
 
 ---

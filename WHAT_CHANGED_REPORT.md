@@ -42,7 +42,7 @@ Headline numbers were independently re-computed before publication.
 
 ### 2.3 "No modelling/analytical tool" → analytics module
 
-New `05_App/PadelLens/analytics.py`, unit-tested (12/12 passing, `tests/`): per-player **Elo engine**, **logistic win-probability model** with decile calibration, **momentum tables**, **pair-chemistry curves**, **k-means player archetypes**, and **Wilson confidence intervals** used on every win rate in the app, with a small-sample guard (n<10 → the app refuses to make a claim).
+New `05_App/PadelLens/analytics.py`, unit-tested (12/12 passing, `tests/`): per-player **Elo engine**, **logistic win-probability model** with decile calibration, **momentum tables**, **pair-chemistry curves**, and **Wilson confidence intervals** used on every win rate in the app, with a small-sample guard (n<10 → the app refuses to make a claim).
 
 ### 2.4 "Standard single-user Streamlit app" → upgraded architecture
 

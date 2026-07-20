@@ -1,6 +1,6 @@
 # PadelLens — Presentation Cheat Sheet (read this twice before you go in)
 
-Deck: `06_Presentation/PadelLens_Deck_v2.pptx` (32 slides). App: double-click `run_app.bat` BEFORE the talk starts and leave it running in a browser tab.
+Deck: `06_Presentation/PadelLens_Deck_v5_FINAL.pptx` (40 slides — the one to present). Script: `06_Presentation/PRESENTATION_SCRIPT_v3.md`. App: double-click `run_app.bat` BEFORE the talk starts and leave it running in a browser tab.
 
 ---
 
@@ -29,7 +29,7 @@ Open with the "what changed" slide confidently: *"I took the evaluation seriousl
 - **Efficiency**: team with fewer total games in the previous round wins **59.7%** of the next match (n=233, p=0.004).
 - **Honest null — say it proudly**: NO home advantage (home teams 43%, p=0.18). "Trustworthy analysis includes what the data does NOT show."
 - Elo vs official points over-performers: De Pascual (Elo #35 vs points #103), Rodriguez Martinez (#35 vs #101), Valenzuela (#58 vs #121).
-- Analytics module: Elo, logistic win model, k-means archetypes, **Wilson CIs on every win rate**, small-n guard (<10 matches → no claim). 12/12 unit tests.
+- Analytics module: Elo, logistic win model, **Wilson CIs on every win rate**, small-n guard (<10 matches → no claim). 12/12 unit tests.
 
 ## The three case-study one-liners (§4)
 

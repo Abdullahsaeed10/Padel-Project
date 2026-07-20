@@ -245,7 +245,7 @@ All pages import from `utils.py`. Key contents:
 | Pandas | ≥ 2.0 | Data wrangling, filtering, groupby, rolling windows |
 | Plotly | ≥ 5.18 | Interactive line, bar, box, radar charts |
 | Requests | ≥ 2.31 | Live Padel API integration — men's & women's rankings |
-| scikit-learn | ≥ 1.3 | Logistic regression win model, K-means player archetypes (`analytics.py`) |
+| scikit-learn | ≥ 1.3 | Logistic regression win model (`analytics.py`) |
 | SciPy | ≥ 1.11 | Statistical support for `analytics.py` |
 | sqlite3 (stdlib) | — | `db.py` persistence, via `build_db.py` |
 
