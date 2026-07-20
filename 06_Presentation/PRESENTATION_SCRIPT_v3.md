@@ -1,6 +1,6 @@
-# PadelLens — Resubmission Presentation Script (v3)
+# PadelLens — Resubmission Presentation Script (v4)
 
-**Deck:** `PadelLens_Deck_v3_full.pptx` (37 slides) · **Target length:** ~35 minutes + Q&A
+**Deck:** `PadelLens_Deck_v4_METHODS.pptx` (40 slides) · **Target length:** ~38 minutes + Q&A
 **Format per entry:** Slide # · Title · Badge status · What to say (2-4 sentences, first person)
 
 Timings are cumulative guidance, not a stopwatch contract — pace to the room, but use these as
@@ -65,7 +65,7 @@ deliberate trade-off, enough to inform without overwhelming."
 
 ---
 
-## PART 2 — Working with Data (target: 7:35)
+## PART 2 — Working with Data (target: 10:35)
 
 **Slide 9 — PART 2 divider** · *unchanged* · ~0:15
 "Part two, working with data — acquisition, transformation, exploration. This is where most of the
@@ -95,19 +95,42 @@ at alpha 0.05, every proportion carrying a Wilson 95% confidence interval. Criti
 three verdicts, not two: signal, null, or insufficient data. That's what separates real
 exploration from cherry-picking."
 
-**Slide 14 — 2.4 Findings — Momentum & Chemistry** · **[NEW]** · ~1:10
+**Slide 14 — 2.4 The Dataset in Numbers** · **[NEW]** · ~1:00
+"Before any test or model, here's exactly what's behind them. A full 2026 Premier Padel season
+pulled from padelapi.org with my own API key: 776 completed matches, 26 tournaments, 2,165 ranked
+players, full draws from round of sixty-four to the final. One honesty note: the statistics use
+the 763 matches that finished normally — thirteen retirements and walkovers are excluded — and
+every raw response is archived as JSONL before any cleaning touches it."
+
+**Slide 15 — 2.5 Statistical Toolkit — Tests** · **[NEW]** · ~1:05
+"Here's exactly how I tested everything that follows. Two-sided, alpha zero point zero five, every
+proportion carrying a ninety-five percent Wilson interval — said aloud, p-hat plus z-squared over
+two n, plus or minus z times the square root of p-hat times one minus p-hat over n, plus z-squared
+over four n-squared, all over one plus z-squared over n, z equal to one point nine six. Binomial
+test for coin-flip questions, chi-squared for the chemistry buckets, Welch's t-test for match
+durations."
+
+**Slide 16 — 2.6 Statistical Toolkit — Models** · **[NEW]** · ~1:05
+"Three models turn those tests into predictions. The logistic win model: probability team one wins
+equals one over one plus e to the negative of beta-zero plus beta-one times the log of the points
+ratio — AUC zero point eighty-eight. The Elo engine: expected score is one over one plus ten to
+the rating difference over four hundred, updated by K times actual minus expected score, K equal
+to thirty-two, unit-tested zero-sum. K-means groups players into shot archetypes. All three live
+in analytics.py, twelve of twelve tests passing."
+
+**Slide 17 — 2.7 Findings — Momentum & Chemistry** · **[NEW]** · ~1:10
 "Two real discoveries. Win set one and you win the match 86% of the time — a huge signal. But
 narrow that to matches that reach a third set, and the edge disappears to 49%, a coin flip.
 Second, chemistry: pairs climb from 40% to 67% win rate as they rack up matches together — but
 I'll flag now, that's survivorship as much as chemistry, and I come back to it in Part 4."
 
-**Slide 15 — 2.5 Findings — Ranking, Upsets, Efficiency** · **[NEW]** · ~1:10
+**Slide 18 — 2.8 Findings — Ranking, Upsets, Efficiency** · **[NEW]** · ~1:10
 "Rankings genuinely predict — the higher-points team wins 78.5% of the time, AUC of 0.88, though I
 treat that as an upper bound given a snapshot-bias caveat. Upsets are rarer than they feel, only
 22.4% of seeded matches, and spike to a coin flip in the final. And efficiency matters — fewer
 games in your previous round predicts a 59.7% win next match."
 
-**Slide 16 — 2.6 The Honest Nulls** · **[NEW]** · ~1:10
+**Slide 19 — 2.9 The Honest Nulls** · **[NEW]** · ~1:10
 "Three of ten questions came back null or insufficient, and I'm showing them on purpose. No home
 advantage — 43%, not significant. No age-gap effect between winners and losers. Handedness and
 height simply don't have enough coverage to trust a comparison. A project that only shows findings
@@ -117,28 +140,28 @@ that worked isn't exploration, it's marketing."
 
 ## PART 3 — UX Design (target: 5:10)
 
-**Slide 17 — PART 3 divider** · *unchanged* · ~0:15
+**Slide 20 — PART 3 divider** · *unchanged* · ~0:15
 "Part three, UX design — wireframes, principles, heuristic evaluation."
 
-**Slide 18 — 3.1 Process** · *unchanged* · ~0:50
+**Slide 21 — 3.1 Process** · *unchanged* · ~0:50
 "Paper sketches to low-fi wireframes to a mid-fi pass with real chart shapes, straight into a
 working Streamlit build. No throwaway click-prototype — the fidelity ladder went straight to
 working code."
 
-**Slide 19 — 3.2 Wireframes** · *unchanged* · ~0:55
+**Slide 22 — 3.2 Wireframes** · *unchanged* · ~0:55
 "Five pages, five tasks. Home answers 'how am I doing right now,' Log Match answers 'add today's
 match,' and so on — every page maps to exactly one question from the brief."
 
-**Slide 20 — 3.3 Principles** · *unchanged* · ~0:50
+**Slide 23 — 3.3 Principles** · *unchanged* · ~0:50
 "Six rules applied throughout: one number above the fold, recognition over recall, default to
 action, low data-entry friction, honest visual hierarchy, and annotate rather than decorate."
 
-**Slide 21 — 3.4 Heuristic Evaluation** · *unchanged* · ~0:55
+**Slide 24 — 3.4 Heuristic Evaluation** · *unchanged* · ~0:55
 "Two concrete changes from Nielsen's ten. Error prevention: set-3 inputs are now disabled until
 sets one and two split. Recognition over recall: filters moved from a hidden button to an
 always-visible sidebar."
 
-**Slide 22 — 3.5 Closing the Validation Loop** · **[NEW]** · ~1:05
+**Slide 25 — 3.5 Closing the Validation Loop** · **[NEW]** · ~1:05
 "This was the most direct criticism — validation was essentially absent. Now the instrument pack
 is complete: a persona survey in English and Italian, an interview guide, a full SUS questionnaire
 with scoring sheet, a task-based protocol, and a heuristic round two for external evaluators.
@@ -148,44 +171,44 @@ Status, honestly: sessions are scheduled, not run — I will not give you an inv
 
 ## PART 4 — Data Representation (target: 7:00)
 
-**Slide 23 — PART 4 divider** · *unchanged (renumbered from PART 5)* · ~0:15
+**Slide 26 — PART 4 divider** · *unchanged (renumbered from PART 5)* · ~0:15
 "Part four, data representation — chart choices, color, interactivity. Note this divider used to
 be mislabeled Part 5 in the first submission; that numbering bug is fixed throughout."
 
-**Slide 24 — 4.1 Chart Inventory** · **[UPDATED]** · ~0:55
+**Slide 27 — 4.1 Chart Inventory** · **[UPDATED]** · ~0:55
 "Same nine core chart types as before, each mapped to one page and one finding. What's new is
 scope — the Insights page adds seven more purpose-built charts on top, bringing the working
 inventory to sixteen, listed at the bottom rather than padding out the table."
 
-**Slide 25 — 4.2 Case Study — Shot DNA** · *unchanged* · ~0:55
+**Slide 28 — 4.2 Case Study — Shot DNA** · *unchanged* · ~0:55
 "This was the one case study the evaluation singled out as reasoned properly. Zero line dead
 center, sign readable at a glance, winners and errors sharing one bar. I rejected a pie, a stacked
 bar, and side-by-side bars — all of them hide or fragment the zero line."
 
-**Slide 26 — 4.3 Case Study — Momentum Slope Chart** · **[NEW]** · ~1:05
+**Slide 29 — 4.3 Case Study — Momentum Slope Chart** · **[NEW]** · ~1:05
 "Winning set one looks decisive — 86% of the time it is. But that number hides every two-set
 blowout. Restricting to matches that go the distance, the edge drops to 49%, a coin flip. I drew
 that as two connected dots, not two bars, because the story is the drop between them, not the two
 numbers separately."
 
-**Slide 27 — 4.4 Case Study — Chemistry Line + CI Band** · **[NEW]** · ~1:05
+**Slide 30 — 4.4 Case Study — Chemistry Line + CI Band** · **[NEW]** · ~1:05
 "Pairs climb from 40% to 68% win rate with more matches together. Tempting to call that practice —
 but only 39% of pairs ever reach five matches together, and the rival explanation is survivorship.
 I didn't want that caveat buried in a caption, so the confidence band narrows visibly as you move
 right, with a callout that spells out why."
 
-**Slide 28 — 4.5 Case Study — Calibration Lollipop** · **[NEW]** · ~1:05
+**Slide 31 — 4.5 Case Study — Calibration Lollipop** · **[NEW]** · ~1:05
 "Rankings predict — 78.5% favorite win rate, AUC 0.88. I checked that with an ROC curve and a
 calibration plot, both looked fine, but neither answers what my audience actually asks. This
 lollipop shows the same finding sliced by gap size: barely above a coin flip at the closest gap,
 almost certain at the widest. Rankings predict — they don't decide."
 
-**Slide 29 — 4.6 Color** · **[UPDATED — renumber only]** · ~0:45
+**Slide 32 — 4.6 Color** · **[UPDATED — renumber only]** · ~0:45
 "This content hasn't changed — same palette, same accessibility checks, and they held up well in
 the evaluation. Only the label changed: this used to sit under a mislabeled divider, now it's
 correctly Part 4."
 
-**Slide 30 — 4.7 Interactivity & Annotations** · **[UPDATED]** · ~0:55
+**Slide 33 — 4.7 Interactivity & Annotations** · **[UPDATED]** · ~0:55
 "Same interactivity and annotation layers as before — sidebar filters, drill-down, hover detail,
 static headline plus dynamic hover. What's new: every Insights-page card follows the same
 discipline but adds a method note under the chart — test, sample size, p-value — so a claim can be
@@ -195,17 +218,17 @@ verified without leaving the chart."
 
 ## PART 5 — Technical Implementation (target: 2:25)
 
-**Slide 31 — PART 5 divider** · *unchanged (renumbered from PART 4)* · ~0:15
+**Slide 34 — PART 5 divider** · *unchanged (renumbered from PART 4)* · ~0:15
 "Part five, technical implementation. This divider used to sit before the wrong section — it's
 now correctly Part 5, after data representation."
 
-**Slide 32 — 5.1 Tech Stack & Architecture** · **[UPDATED]** · ~1:05
+**Slide 35 — 5.1 Tech Stack & Architecture** · **[UPDATED]** · ~1:05
 "Same stack — Python, Streamlit, Pandas, Plotly. What's underneath changed: CSV reads are replaced
 by a SQLite database with a users table, schema is multi-user-ready. There's a new analytics.py
 module, backed by 12 out of 12 passing tests, and every pro view now captions its data source.
 run_app.bat installs, builds the database, and launches the app in one step."
 
-**Slide 33 — 5.2 The Analytics Module** · **[NEW]** · ~1:05
+**Slide 36 — 5.2 The Analytics Module** · **[NEW]** · ~1:05
 "This module didn't exist before — no modelling or analytical tooling was a direct criticism. Now
 there's an Elo engine over all 776 real matches, a logistic win model with calibration, k-means
 player archetypes, and Wilson confidence intervals on every win rate. A small-n guard means fewer
@@ -215,22 +238,22 @@ than ten matches behind a stat, and the app refuses to claim anything."
 
 ## PART 6 — Demo & Conclusions (target: 4:20)
 
-**Slide 34 — PART 6 divider** · *unchanged* · ~0:15
+**Slide 37 — PART 6 divider** · *unchanged* · ~0:15
 "Part six, demo and conclusions — let's see it running, then what's next."
 
-**Slide 35 — 6.1 Demo** · **[UPDATED]** · ~3:00 (live walkthrough)
+**Slide 38 — 6.1 Demo** · **[UPDATED]** · ~3:00 (live walkthrough)
 "Same five-step structure as before, but I've swapped the last stop. Instead of ending on Pro
 Tour, I land on the new Insights page — seven discovery cards, each with its own chart, headline,
 and method note. [Switch to the live app now.] Watch for the synthetic-demo-data badge on every
 personal page — that's not hidden, it's on screen the whole time."
 
-**Slide 36 — 6.2 Future Developments** · **[UPDATED]** · ~1:05
+**Slide 39 — 6.2 Future Developments** · **[UPDATED]** · ~1:05
 "Four of these five are genuinely new priorities. Run the scheduled user tests and get a real SUS
 score. Start logging my own real matches, retiring the synthetic layer piece by piece. One month
 of the API's paid tier unlocks full multi-season history. And a public Streamlit Cloud deployment
 means Marco and Luca could actually use this."
 
-**Slide 37 — THANK YOU** · *unchanged* · ~0:30
+**Slide 40 — THANK YOU** · *unchanged* · ~0:30
 "That's PadelLens, resubmitted — real data, discovered findings, an honest validation status, and
 a deck that's machine-verified against its own claims. Thank you. I'm happy to take questions."
 
@@ -242,13 +265,13 @@ a deck that's machine-verified against its own claims. Thank you. I'm happy to t
 |---|---|---|
 | Opening (title, overview, what changed) | 1–3 | 2:15 |
 | Part 1 — The Brief | 4–8 | 4:10 |
-| Part 2 — Working with Data | 9–16 | 7:35 |
-| Part 3 — UX Design | 17–22 | 5:10 |
-| Part 4 — Data Representation | 23–30 | 7:00 |
-| Part 5 — Technical Implementation | 31–33 | 2:25 |
-| Part 6 — Demo & Conclusions | 34–37 | 4:20 |
-| **Total** | **37 slides** | **~33 min + Q&A** |
+| Part 2 — Working with Data | 9–19 | 10:35 |
+| Part 3 — UX Design | 20–25 | 5:10 |
+| Part 4 — Data Representation | 26–33 | 7:00 |
+| Part 5 — Technical Implementation | 34–36 | 2:25 |
+| Part 6 — Demo & Conclusions | 37–40 | 4:20 |
+| **Total** | **40 slides** | **~36 min + Q&A** |
 
-Live demo (slide 35) can stretch or compress by a minute or two depending on questions during the
-walkthrough — everything else should hold close to its budget to land the talk at roughly 35
+Live demo (slide 38) can stretch or compress by a minute or two depending on questions during the
+walkthrough — everything else should hold close to its budget to land the talk at roughly 38
 minutes including natural pacing.
