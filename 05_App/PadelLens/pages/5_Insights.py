@@ -43,6 +43,16 @@ inject_theme_css()
 t = get_theme()
 
 FINDINGS_PATH = Path(__file__).parent.parent / "data" / "findings.json"
+EDA_RESULTS_PATH = (Path(__file__).parent.parent.parent.parent
+                    / "02_Data" / "eda" / "eda_results.json")
+
+
+def _load_eda_results() -> dict:
+    """Verified EDA statistics (02_Data/eda/eda_results.json); {} if absent."""
+    try:
+        return json.loads(EDA_RESULTS_PATH.read_text(encoding="utf-8"))
+    except (FileNotFoundError, json.JSONDecodeError, OSError):
+        return {}
 
 with st.sidebar:
     player_name = sidebar_player_name()
@@ -135,43 +145,65 @@ def render_momentum(pro_matches: pd.DataFrame, pro_players: pd.DataFrame):
         lost_lo.append(lo)
         lost_hi.append(hi)
 
-    fig = go.Figure()
-    fig.add_trace(go.Bar(
-        name="Won set 1", x=groups, y=[r * 100 for r in won_rate], marker_color=BLUE,
-        error_y=dict(type="data", symmetric=False,
-                     array=[(h - r) * 100 for h, r in zip(won_hi, won_rate)],
-                     arrayminus=[(r - l) * 100 for r, l in zip(won_rate, won_lo)]),
-        hovertemplate="<b>%{x}</b><br>Won set 1 -> win rate: %{y:.0f}%<extra></extra>",
-    ))
-    fig.add_trace(go.Bar(
-        name="Lost set 1", x=groups, y=[r * 100 for r in lost_rate], marker_color=RED,
-        error_y=dict(type="data", symmetric=False,
-                     array=[(h - r) * 100 for h, r in zip(lost_hi, lost_rate)],
-                     arrayminus=[(r - l) * 100 for r, l in zip(lost_rate, lost_lo)]),
-        hovertemplate="<b>%{x}</b><br>Lost set 1 -> win rate: %{y:.0f}%<extra></extra>",
-    ))
-    overall_idx = groups.index("Overall") if "Overall" in groups else 0
-    fig.add_annotation(
-        x=groups[overall_idx], y=won_rate[overall_idx] * 100 + 6,
-        text=f"Winning set 1 -> {won_rate[overall_idx]*100:.0f}% match win rate overall",
-        showarrow=False, font=dict(size=11, color=t["ink"]))
-
     decider = _decider_set_momentum(pro_matches)
-    if decider:
-        fig.add_annotation(
-            xref="paper", yref="paper", x=1.0, y=1.16, xanchor="right",
-            text=(f"In deciders (n={decider['n']}): set-1 winner wins set 3 only "
-                  f"{decider['rate']*100:.0f}% of the time — resets"),
-            showarrow=False, font=dict(size=10, color=t["muted"]))
+    overall_idx = groups.index("Overall") if "Overall" in groups else 0
+    overall_pct = won_rate[overall_idx] * 100
 
-    fig.update_layout(
-        barmode="group", height=400, margin=dict(l=20, r=20, t=55, b=20),
-        yaxis=dict(range=[0, 110], ticksuffix="%", title="P(win match)"),
-        xaxis=dict(title=""),
-        legend=dict(orientation="h", yanchor="bottom", y=1.0, xanchor="left", x=0.0),
-    )
-    st.plotly_chart(themed_fig(fig), use_container_width=True,
-                    config={"displayModeBar": False})
+    # PRIMARY: two-point slope chart (same encoding as case study 4.3) —
+    # the slope IS the message: a strong set-1 signal that collapses to a
+    # coin flip once the match reaches a decider.
+    slope = go.Figure()
+    if decider:
+        dec_pct = decider["rate"] * 100
+        slope.add_trace(go.Scatter(
+            x=["After winning set 1", "In a deciding set"],
+            y=[overall_pct, dec_pct], mode="lines+markers+text",
+            line=dict(color=BLUE, width=3), marker=dict(size=16, color=BLUE),
+            text=[f"<b>{overall_pct:.0f}%</b>", f"<b>{dec_pct:.0f}%</b>"],
+            textposition=["top center", "top center"],
+            textfont=dict(size=18, color=t["ink"]),
+            hovertemplate="%{x}: %{y:.1f}%<extra></extra>", showlegend=False))
+        slope.add_hline(y=50, line_dash="dot", line_color=GRAY,
+                        annotation_text="coin flip (50%)",
+                        annotation_font_size=10)
+        slope.add_annotation(
+            xref="paper", yref="paper", x=0.5, y=-0.18, showarrow=False,
+            text=(f"{overall_pct:.0f}% -> {dec_pct:.0f}%: the set-1 edge "
+                  f"evaporates once the match reaches a decider (n={decider['n']})"),
+            font=dict(size=11, color=t["muted"]))
+        slope.update_layout(
+            height=340, margin=dict(l=20, r=20, t=30, b=60),
+            yaxis=dict(range=[0, 105], ticksuffix="%",
+                       title="Set-1 winner's win rate"),
+            xaxis=dict(title=""))
+        st.plotly_chart(themed_fig(slope), use_container_width=True,
+                        config={"displayModeBar": False})
+
+    # DETAIL: by-group bars with Wilson CIs, one click away
+    with st.expander("Detail: by gender and tournament level (with 95% CIs)"):
+        fig = go.Figure()
+        fig.add_trace(go.Bar(
+            name="Won set 1", x=groups, y=[r * 100 for r in won_rate], marker_color=BLUE,
+            error_y=dict(type="data", symmetric=False,
+                         array=[(h - r) * 100 for h, r in zip(won_hi, won_rate)],
+                         arrayminus=[(r - l) * 100 for r, l in zip(won_rate, won_lo)]),
+            hovertemplate="<b>%{x}</b><br>Won set 1 -> win rate: %{y:.0f}%<extra></extra>",
+        ))
+        fig.add_trace(go.Bar(
+            name="Lost set 1", x=groups, y=[r * 100 for r in lost_rate], marker_color=RED,
+            error_y=dict(type="data", symmetric=False,
+                         array=[(h - r) * 100 for h, r in zip(lost_hi, lost_rate)],
+                         arrayminus=[(r - l) * 100 for r, l in zip(lost_rate, lost_lo)]),
+            hovertemplate="<b>%{x}</b><br>Lost set 1 -> win rate: %{y:.0f}%<extra></extra>",
+        ))
+        fig.update_layout(
+            barmode="group", height=380, margin=dict(l=20, r=20, t=30, b=20),
+            yaxis=dict(range=[0, 110], ticksuffix="%", title="P(win match)"),
+            xaxis=dict(title=""),
+            legend=dict(orientation="h", yanchor="bottom", y=1.0, xanchor="left", x=0.0),
+        )
+        st.plotly_chart(themed_fig(fig), use_container_width=True,
+                        config={"displayModeBar": False})
 
 
 
@@ -284,6 +316,51 @@ def render_calibration(pro_matches: pd.DataFrame, pro_players: pd.DataFrame):
         st.info(f"Not enough complete-player data to fit the win model yet: {exc}")
         return
 
+    # PRIMARY: lollipop of favorite win rate by ranking-gap quintile (same
+    # encoding as case study 4.5) — reuses the verified EDA numbers from
+    # eda_results.json (E2) rather than recomputing in-app.
+    _eda = _load_eda_results()
+    quint = (_eda.get("E2_ranking_calibration", {})
+                 .get("subgroups", {}).get("by_points_gap_quintile", {}))
+    overall = _eda.get("E2_ranking_calibration", {}).get("headline_estimate")
+    if quint and overall:
+        labels = ["Closest gap (Q1)", "Q2", "Q3", "Q4", "Widest gap (Q5)"]
+        keys = sorted(quint.keys(), key=int)
+        rates = [quint[k]["estimate"] * 100 for k in keys]
+        ns = [quint[k]["n"] for k in keys]
+        lol = go.Figure()
+        for lab, r in zip(labels, rates):
+            lol.add_trace(go.Scatter(x=[50, r], y=[lab, lab], mode="lines",
+                                     line=dict(color=BLUE, width=3),
+                                     showlegend=False, hoverinfo="skip"))
+        lol.add_trace(go.Scatter(
+            x=rates, y=labels, mode="markers+text",
+            marker=dict(size=14, color=BLUE),
+            text=[f"<b>{r:.1f}%</b>" for r in rates], textposition="middle right",
+            textfont=dict(size=13, color=t["ink"]),
+            customdata=ns, hovertemplate="%{y}: %{x:.1f}% (n=%{customdata})<extra></extra>",
+            showlegend=False))
+        lol.add_vline(x=50, line_dash="dot", line_color=GRAY,
+                      annotation_text="coin flip (50%)", annotation_font_size=10)
+        lol.add_vline(x=overall * 100, line_dash="dash", line_color=GRAY,
+                      annotation_text=f"season average ({overall*100:.1f}%)",
+                      annotation_font_size=10)
+        lol.update_layout(height=340, margin=dict(l=20, r=60, t=40, b=30),
+                          xaxis=dict(range=[40, 105], ticksuffix="%",
+                                     title="Favorite's win rate"),
+                          yaxis=dict(autorange="reversed"))
+        st.plotly_chart(themed_fig(lol), use_container_width=True,
+                        config={"displayModeBar": False})
+        st.caption(f"Even the closest gap tips to the favorite "
+                   f"({rates[0]:.0f}%); the widest is almost a sure thing "
+                   f"({rates[-1]:.0f}%). Trust scales with gap size.")
+
+    # DETAIL: model calibration deciles vs the y = x diagonal
+    with st.expander("Detail: logistic-model calibration (predicted vs actual, by decile)"):
+        _render_calibration_detail(result)
+
+
+def _render_calibration_detail(result):
     calib = result["calibration"]
     fig = go.Figure()
     fig.add_trace(go.Scatter(
