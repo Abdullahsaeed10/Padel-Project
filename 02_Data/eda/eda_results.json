@@ -1,0 +1,738 @@
+{
+  "meta": {
+    "n_matches_total": 776,
+    "n_matches_finished": 763,
+    "n_matches_excluded_nonfinished": 13,
+    "n_players_total": 2165,
+    "n_distinct_match_participants": 279,
+    "alpha": 0.05,
+    "ci_method": "Wilson score interval, 95%"
+  },
+  "E1_momentum": {
+    "headline_estimate": 0.8624,
+    "n": 763,
+    "ci95": [
+      0.8361,
+      0.885
+    ],
+    "test": "two-sided binomial test vs 0.5",
+    "p_value": 1.1512469492696669e-98,
+    "subgroups": {
+      "by_gender": {
+        "men": {
+          "n": 449,
+          "k": 387,
+          "estimate": 0.8619,
+          "ci95": [
+            0.8269,
+            0.8908
+          ],
+          "test": "two-sided binomial test vs 0.5",
+          "p_value": 1.7236534616974092e-58
+        },
+        "women": {
+          "n": 314,
+          "k": 271,
+          "estimate": 0.8631,
+          "ci95": [
+            0.8206,
+            0.8967
+          ],
+          "test": "two-sided binomial test vs 0.5",
+          "p_value": 1.3468634967309783e-41
+        }
+      },
+      "by_level": {
+        "p1": {
+          "n": 333,
+          "k": 288,
+          "estimate": 0.8649,
+          "ci95": [
+            0.824,
+            0.8974
+          ],
+          "test": "two-sided binomial test vs 0.5",
+          "p_value": 1.6237335894683609e-44
+        },
+        "p2": {
+          "n": 345,
+          "k": 296,
+          "estimate": 0.858,
+          "ci95": [
+            0.8172,
+            0.8909
+          ],
+          "test": "two-sided binomial test vs 0.5",
+          "p_value": 3.4478058058573144e-44
+        },
+        "major": {
+          "n": 85,
+          "k": 74,
+          "estimate": 0.8706,
+          "ci95": [
+            0.783,
+            0.9262
+          ],
+          "test": "two-sided binomial test vs 0.5",
+          "p_value": 1.2888315230163817e-12
+        }
+      },
+      "set3_given_deciding_set": {
+        "description": "P(set1 winner also wins set3 | match reached a valid 3rd set)",
+        "n": 207,
+        "k": 102,
+        "estimate": 0.4928,
+        "ci95": [
+          0.4254,
+          0.5604
+        ],
+        "test": "two-sided binomial test vs 0.5",
+        "p_value": 0.889486
+      }
+    },
+    "caveats": [
+      "Excludes 13 non-finished matches (retired/walkover); n reflects finished matches with a parseable set1 score.",
+      "'Win match | won set1' computed as P(set1 winner == match winner)."
+    ],
+    "verdict": "signal"
+  },
+  "E2_ranking_calibration": {
+    "headline_estimate": 0.7851,
+    "n": 763,
+    "ci95": [
+      0.7545,
+      0.8127
+    ],
+    "test": "two-sided binomial test vs 0.5 (favorite win rate)",
+    "p_value": 5.653331738407321e-59,
+    "subgroups": {
+      "by_points_gap_quintile": {
+        "1": {
+          "n": 153,
+          "estimate": 0.5882,
+          "ci95": [
+            0.509,
+            0.6631
+          ],
+          "mean_abs_gap": 600.3
+        },
+        "2": {
+          "n": 152,
+          "estimate": 0.7434,
+          "ci95": [
+            0.6686,
+            0.8063
+          ],
+          "mean_abs_gap": 2117.7
+        },
+        "3": {
+          "n": 153,
+          "estimate": 0.7582,
+          "ci95": [
+            0.6845,
+            0.8192
+          ],
+          "mean_abs_gap": 4992.6
+        },
+        "4": {
+          "n": 154,
+          "estimate": 0.8701,
+          "ci95": [
+            0.8079,
+            0.9143
+          ],
+          "mean_abs_gap": 10215.5
+        },
+        "5": {
+          "n": 151,
+          "estimate": 0.9669,
+          "ci95": [
+            0.9248,
+            0.9858
+          ],
+          "mean_abs_gap": 27744.3
+        }
+      },
+      "by_gender": {
+        "men": {
+          "n": 449,
+          "estimate": 0.784,
+          "ci95": [
+            0.7436,
+            0.8195
+          ]
+        },
+        "women": {
+          "n": 314,
+          "estimate": 0.7866,
+          "ci95": [
+            0.738,
+            0.8283
+          ]
+        }
+      },
+      "by_level": {
+        "major": {
+          "n": 85,
+          "estimate": 0.8,
+          "ci95": [
+            0.7028,
+            0.8712
+          ]
+        },
+        "p1": {
+          "n": 333,
+          "estimate": 0.7898,
+          "ci95": [
+            0.7428,
+            0.8301
+          ]
+        },
+        "p2": {
+          "n": 345,
+          "estimate": 0.7768,
+          "ci95": [
+            0.73,
+            0.8176
+          ]
+        }
+      },
+      "logistic_regression": {
+        "predictor": "log(team1_points / team2_points)",
+        "n": 763,
+        "auc": 0.8832,
+        "coefficient": 1.7874,
+        "intercept": -0.1408,
+        "decile_calibration": [
+          {
+            "decile": 1,
+            "n": 77,
+            "mean_predicted": 0.022,
+            "actual_win_rate": 0.013
+          },
+          {
+            "decile": 2,
+            "n": 76,
+            "mean_predicted": 0.085,
+            "actual_win_rate": 0.066
+          },
+          {
+            "decile": 3,
+            "n": 76,
+            "mean_predicted": 0.158,
+            "actual_win_rate": 0.184
+          },
+          {
+            "decile": 4,
+            "n": 76,
+            "mean_predicted": 0.271,
+            "actual_win_rate": 0.342
+          },
+          {
+            "decile": 5,
+            "n": 77,
+            "mean_predicted": 0.425,
+            "actual_win_rate": 0.39
+          },
+          {
+            "decile": 6,
+            "n": 76,
+            "mean_predicted": 0.571,
+            "actual_win_rate": 0.513
+          },
+          {
+            "decile": 7,
+            "n": 76,
+            "mean_predicted": 0.688,
+            "actual_win_rate": 0.671
+          },
+          {
+            "decile": 8,
+            "n": 76,
+            "mean_predicted": 0.813,
+            "actual_win_rate": 0.816
+          },
+          {
+            "decile": 9,
+            "n": 76,
+            "mean_predicted": 0.897,
+            "actual_win_rate": 0.921
+          },
+          {
+            "decile": 10,
+            "n": 77,
+            "mean_predicted": 0.973,
+            "actual_win_rate": 0.987
+          }
+        ]
+      }
+    },
+    "caveats": [
+      "CAVEAT: points are an end-of-season/end-of-window SNAPSHOT (current ranking points), NOT the points each player held on the match date. This is a look-ahead bias risk: early-season matches are evaluated against ranking points the players earned partly AFTER the match. Treat as an approximate/optimistic calibration check, not a true pre-match prediction test.",
+      "0 finished matches excluded (missing points for >=1 player, or exact points tie)."
+    ],
+    "verdict": "signal"
+  },
+  "E3_pair_chemistry": {
+    "headline_estimate": "win rate by nth-match-together bucket (see subgroups)",
+    "n": 1526,
+    "ci95": null,
+    "test": "chi-square test of independence (win rate across buckets)",
+    "p_value": 2.970151327296124e-15,
+    "subgroups": {
+      "by_bucket": {
+        "1-3": {
+          "n": 488,
+          "estimate": 0.3975,
+          "ci95": [
+            0.3551,
+            0.4416
+          ]
+        },
+        "4-8": {
+          "n": 400,
+          "estimate": 0.4525,
+          "ci95": [
+            0.4044,
+            0.5015
+          ]
+        },
+        "9-15": {
+          "n": 289,
+          "estimate": 0.519,
+          "ci95": [
+            0.4616,
+            0.576
+          ]
+        },
+        "16+": {
+          "n": 349,
+          "estimate": 0.6819,
+          "ci95": [
+            0.6313,
+            0.7286
+          ]
+        }
+      },
+      "n_distinct_pairs": 230,
+      "matches_per_pair_summary": {
+        "mean": 6.63,
+        "median": 3.0,
+        "max": 51,
+        "min": 1,
+        "pairs_with_1_match": 88,
+        "pairs_with_5plus_matches": 89
+      }
+    },
+    "caveats": [
+      "Pair = unordered set of two player ids appearing together on the same team side in a match, tracked across the whole season regardless of team1/team2 slot.",
+      "Season-only window: 'nth match together' does not account for partnership history before this dataset's start."
+    ],
+    "verdict": "signal"
+  },
+  "E4_seed_upsets": {
+    "headline_estimate": 0.2242,
+    "n": 165,
+    "ci95": [
+      0.1673,
+      0.2937
+    ],
+    "test": "two-sided binomial test vs 0.5",
+    "p_value": 6.095098034624992e-13,
+    "subgroups": {
+      "by_round": {
+        "Finals": {
+          "n": 24,
+          "estimate": 0.5,
+          "ci95": [
+            0.3143,
+            0.6857
+          ]
+        },
+        "Quarter": {
+          "n": 67,
+          "estimate": 0.209,
+          "ci95": [
+            0.1288,
+            0.3207
+          ]
+        },
+        "Round of 16": {
+          "n": 31,
+          "estimate": 0.1613,
+          "ci95": [
+            0.0709,
+            0.3263
+          ]
+        },
+        "Semifinals": {
+          "n": 43,
+          "estimate": 0.1395,
+          "ci95": [
+            0.0656,
+            0.2726
+          ]
+        }
+      },
+      "by_level": {
+        "major": {
+          "n": 22,
+          "estimate": 0.1364,
+          "ci95": [
+            0.0475,
+            0.3333
+          ]
+        },
+        "p1": {
+          "n": 70,
+          "estimate": 0.1857,
+          "ci95": [
+            0.1119,
+            0.2923
+          ]
+        },
+        "p2": {
+          "n": 73,
+          "estimate": 0.2877,
+          "ci95": [
+            0.1965,
+            0.4001
+          ]
+        }
+      },
+      "by_gender": {
+        "men": {
+          "n": 89,
+          "estimate": 0.191,
+          "ci95": [
+            0.1228,
+            0.2848
+          ]
+        },
+        "women": {
+          "n": 76,
+          "estimate": 0.2632,
+          "ci95": [
+            0.1773,
+            0.3718
+          ]
+        }
+      }
+    },
+    "caveats": [
+      "Only 165 of 763 finished matches have BOTH teams numerically seeded (WC/Q/LL/LLI/blank excluded). This is a small, seed-selected subsample -- not representative of all matches.",
+      "Upset = winner had a numerically higher (worse) seed than the loser."
+    ],
+    "verdict": "signal"
+  },
+  "E5_handedness": {
+    "headline_estimate": null,
+    "n": 279,
+    "ci95": null,
+    "test": null,
+    "p_value": null,
+    "subgroups": {
+      "hand_coverage_full_players_table_pct": 6.4,
+      "hand_coverage_match_participants_pct": 38.4,
+      "n_match_participants": 279,
+      "n_finished_matches_with_all_4_hands_known": 368
+    },
+    "caveats": [
+      "Hand data covers only 6.4% of all 2165 players and 38.4% of the 279 distinct players who appear in the 776 real matches (threshold for 'usable' set at >60%).",
+      "Only 368 of 763 finished matches have hand data for all 4 participants -- far too few for a reliable win-rate comparison."
+    ],
+    "verdict": "insufficient_data"
+  },
+  "E6_physique_age": {
+    "headline_estimate": -0.223,
+    "n": 763,
+    "ci95": [
+      -0.626,
+      0.179
+    ],
+    "test": "one-sample t-test (winner-loser age gap vs 0)",
+    "p_value": 0.276709,
+    "subgroups": {
+      "height_coverage_full_players_table_pct": 33.8,
+      "height_coverage_match_participants_pct": 88.5,
+      "height_analysis_skipped": true,
+      "within_pair_age_gap_vs_win_correlation": {
+        "n": 1526,
+        "pearson_r": -0.0574,
+        "p_value": 0.0249
+      },
+      "young_team_ge3yr_younger_win_rate": {
+        "n": 484,
+        "estimate": 0.5083,
+        "ci95": [
+          0.4638,
+          0.5526
+        ],
+        "p_value": 0.750384,
+        "test": "two-sided binomial test vs 0.5"
+      }
+    },
+    "caveats": [
+      "Height coverage is 33.8% across the full players table (<60% threshold) -- height-based win-rate analysis is SKIPPED as unreliable, per instructions. (Coverage among the 279 match participants specifically is 88.5%, still reported for transparency.)",
+      "Age gap sign convention: positive value = winning team was OLDER on average than the losing team."
+    ],
+    "verdict": "null"
+  },
+  "E7_duration": {
+    "headline_estimate": {
+      "2_sets_mean_min": 79.0,
+      "3_sets_mean_min": 135.5
+    },
+    "n": 755,
+    "ci95": null,
+    "test": "Welch t-test (3-set duration: major/p1 vs p2)",
+    "p_value": 0.612127,
+    "subgroups": {
+      "by_n_sets": {
+        "2": {
+          "n": 550,
+          "mean_minutes": 79.0,
+          "sd": 24.1
+        },
+        "3": {
+          "n": 205,
+          "mean_minutes": 135.5,
+          "sd": 62.0
+        }
+      },
+      "by_level": {
+        "major": {
+          "n": 85,
+          "mean_minutes": 97.6
+        },
+        "p1": {
+          "n": 333,
+          "mean_minutes": 94.2
+        },
+        "p2": {
+          "n": 337,
+          "mean_minutes": 93.7
+        }
+      },
+      "by_gender": {
+        "men": {
+          "n": 441,
+          "mean_minutes": 89.8
+        },
+        "women": {
+          "n": 314,
+          "mean_minutes": 100.8
+        }
+      },
+      "three_set_duration_major_p1_vs_p2": {
+        "major_p1_n": 116,
+        "major_p1_mean": 137.2,
+        "p2_n": 89,
+        "p2_mean": 133.2,
+        "t_stat": 0.508,
+        "p_value": 0.612127
+      },
+      "duration_upset_vs_nonupset": {
+        "upset_n": 37,
+        "upset_mean": 141.2,
+        "nonupset_n": 128,
+        "nonupset_mean": 89.4,
+        "t_stat": 2.351,
+        "p_value": 0.024124
+      }
+    },
+    "caveats": [
+      "8 finished matches excluded for missing duration_min."
+    ],
+    "verdict": "null"
+  },
+  "E8_rest_schedule": {
+    "headline_estimate": 0.5966,
+    "n": 233,
+    "ci95": [
+      0.5325,
+      0.6575
+    ],
+    "test": "two-sided binomial test vs 0.5 (fewer-prev-round-games team win rate)",
+    "p_value": 0.00385,
+    "subgroups": {
+      "zero_days_rest": {
+        "n": 0,
+        "estimate": null,
+        "ci95": [
+          null,
+          null
+        ],
+        "note": "NO true 0-day (same-day repeat) rest observations exist in this bracket schedule -- insufficient_data for this exact split."
+      },
+      "one_day_rest_quick_turnaround": {
+        "n": 618,
+        "estimate": 0.3997,
+        "ci95": [
+          0.3618,
+          0.4388
+        ]
+      },
+      "two_plus_days_rest": {
+        "n": 86,
+        "estimate": 0.3023,
+        "ci95": [
+          0.2154,
+          0.4061
+        ]
+      },
+      "quick_vs_extra_rest_test": {
+        "test": "chi-square (1-day vs 2+-day rest win rate)",
+        "p_value": 0.105685
+      },
+      "one_plus_days_rest_pooled": {
+        "n": 704,
+        "estimate": 0.3878,
+        "ci95": [
+          0.3525,
+          0.4243
+        ]
+      },
+      "fewer_prev_round_games_wins_more": {
+        "n": 233,
+        "estimate": 0.5966,
+        "ci95": [
+          0.5325,
+          0.6575
+        ],
+        "test": "two-sided binomial test vs 0.5",
+        "p_value": 0.00385
+      }
+    },
+    "caveats": [
+      "0-day (back-to-back same-day) rest never occurs for a pair in this dataset's bracket schedules (observed rest gaps are only 1, 2, or 3 days) -- the literal '0 days vs 1+' comparison requested is reported as insufficient_data; a 1-day vs 2+-day comparison is substituted and reported transparently.",
+      "'Previous match' = pair's prior match in the SAME tournament (round-robin/bracket order by date); first-round or bye matches for a pair have no known rest and are excluded.",
+      "Rest-day and games observations are pooled per team-match (not match-paired), so left/right group ns need not sum simply to total matches.",
+      "n with rest known on at least one side: 704 team-observations from 458 matches."
+    ],
+    "verdict": "signal"
+  },
+  "E9_home_advantage": {
+    "headline_estimate": 0.4312,
+    "n": 109,
+    "ci95": [
+      0.3421,
+      0.5249
+    ],
+    "test": "two-sided binomial test vs 0.5",
+    "p_value": 0.179671,
+    "subgroups": {
+      "by_country": {
+        "ES": {
+          "n": 34,
+          "estimate": 0.6176,
+          "ci95": [
+            0.4504,
+            0.761
+          ],
+          "p_value": 0.229481
+        },
+        "IT": {
+          "n": 17,
+          "estimate": 0.4118,
+          "ci95": [
+            0.2161,
+            0.6399
+          ],
+          "p_value": 0.629059
+        },
+        "FR": {
+          "n": 5,
+          "estimate": 0.2,
+          "ci95": [
+            0.0362,
+            0.6245
+          ],
+          "p_value": 0.375
+        },
+        "SA": {
+          "n": 4,
+          "estimate": 0.0,
+          "ci95": [
+            0.0,
+            0.4899
+          ],
+          "p_value": 0.125
+        }
+      }
+    },
+    "caveats": [
+      "Home = at least one player's nationality (ISO2) equals the tournament host country's ISO2 code.",
+      "654 matches excluded because both teams were equally home/away (both or neither had a home player)."
+    ],
+    "verdict": "null"
+  },
+  "E10_scoreline_patterns": {
+    "headline_estimate": {
+      "most_common_scoreline": "6-3",
+      "count": 399,
+      "p_6_0_anywhere": 0.1062
+    },
+    "n": 763,
+    "ci95": [
+      0.0862,
+      0.13
+    ],
+    "test": "two-sided binomial test vs 0.5 (comeback rate, complement check of E1)",
+    "p_value": 1.1512469492696669e-98,
+    "subgroups": {
+      "top_10_scorelines": {
+        "6-3": 399,
+        "6-4": 343,
+        "6-2": 304,
+        "7-6": 240,
+        "6-1": 201,
+        "7-5": 158,
+        "6-0": 88
+      },
+      "p_6_0_set_anywhere": {
+        "n": 763,
+        "k": 81,
+        "estimate": 0.1062,
+        "ci95": [
+          0.0862,
+          0.13
+        ]
+      },
+      "comeback_rate_overall": {
+        "n": 763,
+        "estimate": 0.1376,
+        "ci95": [
+          0.115,
+          0.1639
+        ],
+        "p_value": 1.1512469492696669e-98
+      },
+      "comeback_rate_by_gender": {
+        "men": {
+          "n": 449,
+          "estimate": 0.1381,
+          "ci95": [
+            0.1092,
+            0.1731
+          ],
+          "p_value": 1.7236534616974092e-58
+        },
+        "women": {
+          "n": 314,
+          "estimate": 0.1369,
+          "ci95": [
+            0.1033,
+            0.1794
+          ],
+          "p_value": 1.3468634967309783e-41
+        }
+      }
+    },
+    "caveats": [
+      "Comeback rate is the complement of E1's momentum stat by construction: comeback_rate = 1 - P(set1 winner wins match); reported here as an independent direct computation for cross-check.",
+      "Scoreline strings normalized to 'higher-lower' games (tiebreak parenthetical scores ignored)."
+    ],
+    "verdict": "signal"
+  }
+}

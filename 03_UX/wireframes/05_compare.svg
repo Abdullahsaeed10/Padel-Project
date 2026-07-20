@@ -1,0 +1,93 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" font-family="Inter, Arial, sans-serif">
+  <style>
+    .card { fill:#fff; stroke:#cfd6dd; stroke-width:1; }
+    .ph { fill:#e7ecf0; stroke:#cfd6dd; }
+    .label { font-size:11px; fill:#7b8694; letter-spacing:0.3px; }
+    .title { font-size:14px; font-weight:600; fill:#2a3340; }
+    .sub { font-size:12px; fill:#6b7280; }
+    .nav { font-size:13px; fill:#374151; }
+    .ann { font-size:10px; fill:#9aa3ad; font-style:italic; }
+    .kpi { font-size:28px; font-weight:700; fill:#1f2937; }
+  </style>
+  <rect width="1280" height="800" fill="#f6f8fa"/>
+  <rect x="0" y="0" width="1280" height="64" fill="#ffffff" stroke="#e1e5ea"/>
+  <text x="32" y="40" class="title" font-size="18">PadelLens</text>
+  <g class="nav">
+    <text x="260" y="40">Home</text>
+    <text x="320" y="40">Pro Tour</text>
+    <text x="395" y="40">My Stats</text>
+    <text x="470" y="40">Log a Match</text>
+    <text x="565" y="40" font-weight="600" fill="#0ea5e9">Compare</text>
+  </g>
+  <text x="32" y="108" class="title" font-size="22" fill="#1f2937">Compare your game to the pros</text>
+  <text x="32" y="130" class="sub">Pick a pro player or use the pro average. We're not saying you should play like them — we're showing where the biggest gaps are.</text>
+  <!-- Toggle -->
+  <g transform="translate(32,156)">
+    <rect width="200" height="36" rx="6" fill="#0ea5e9"/>
+    <text x="100" y="22" fill="#fff" font-size="12" text-anchor="middle">vs Pro average</text>
+    <rect x="210" width="200" height="36" rx="6" class="card"/>
+    <text x="310" y="22" class="sub" text-anchor="middle">vs A specific player ⌄</text>
+  </g>
+  <!-- Main radar card -->
+  <rect x="32" y="216" width="780" height="552" rx="10" class="card"/>
+  <text x="56" y="244" class="label">SHOT-MIX RADAR</text>
+  <text x="56" y="266" class="title">Your shot distribution overlaid on pro average</text>
+  <!-- radar -->
+  <g transform="translate(420,500)">
+    <!-- 5 axes -->
+    <line x1="0" y1="0" x2="0" y2="-200" stroke="#cfd6dd"/>
+    <line x1="0" y1="0" x2="190" y2="-62" stroke="#cfd6dd"/>
+    <line x1="0" y1="0" x2="118" y2="160" stroke="#cfd6dd"/>
+    <line x1="0" y1="0" x2="-118" y2="160" stroke="#cfd6dd"/>
+    <line x1="0" y1="0" x2="-190" y2="-62" stroke="#cfd6dd"/>
+    <!-- rings -->
+    <polygon points="0,-200 190,-62 118,160 -118,160 -190,-62" fill="none" stroke="#eef0f3"/>
+    <polygon points="0,-150 142,-46 88,120 -88,120 -142,-46" fill="none" stroke="#eef0f3"/>
+    <polygon points="0,-100 95,-31 59,80 -59,80 -95,-31" fill="none" stroke="#eef0f3"/>
+    <polygon points="0,-50 47,-15 29,40 -29,40 -47,-15" fill="none" stroke="#eef0f3"/>
+    <!-- Pro avg polygon -->
+    <polygon points="0,-160 152,-50 70,95 -82,112 -114,-37" fill="#94a3b8" fill-opacity="0.35" stroke="#94a3b8" stroke-width="1.5"/>
+    <!-- You polygon -->
+    <polygon points="0,-105 60,-20 100,135 -36,49 -76,-25" fill="#0ea5e9" fill-opacity="0.35" stroke="#0ea5e9" stroke-width="2"/>
+    <!-- Axis labels -->
+    <text x="0" y="-216" class="sub" text-anchor="middle">Forehand</text>
+    <text x="208" y="-58" class="sub">Backhand</text>
+    <text x="130" y="180" class="sub">Smash</text>
+    <text x="-130" y="180" class="sub" text-anchor="end">Volley</text>
+    <text x="-208" y="-58" class="sub" text-anchor="end">Bandeja</text>
+  </g>
+  <!-- Legend -->
+  <g transform="translate(56,290)">
+    <rect width="12" height="12" fill="#0ea5e9" fill-opacity="0.35" stroke="#0ea5e9"/>
+    <text x="20" y="10" class="sub">You · last 30 matches</text>
+    <rect y="22" width="12" height="12" fill="#94a3b8" fill-opacity="0.35" stroke="#94a3b8"/>
+    <text x="20" y="32" class="sub">Pro average · Premier Padel 2024</text>
+  </g>
+  <!-- Annotations on radar -->
+  <text x="56" y="730" class="ann">Annotation: arrow highlights the largest gap (smash) — focus in editorial terms.</text>
+  <!-- Right panel: insights -->
+  <rect x="828" y="216" width="420" height="552" rx="10" class="card"/>
+  <text x="852" y="246" class="label">BIGGEST GAPS</text>
+  <g transform="translate(852,268)">
+    <rect width="372" height="100" rx="8" fill="#fef2f2" stroke="#fecaca"/>
+    <text x="16" y="28" class="title" fill="#b91c1c">Smash</text>
+    <text x="16" y="50" class="sub">You: 1.6 winners / match · Pros: 4.1</text>
+    <text x="16" y="68" class="sub">Gap: -2.5 winners. This is your biggest miss.</text>
+    <text x="16" y="86" class="sub" font-style="italic">Try: defensive smash from the back glass — 3 sets weekly.</text>
+  </g>
+  <g transform="translate(852,386)">
+    <rect width="372" height="100" rx="8" fill="#fff7ed" stroke="#fed7aa"/>
+    <text x="16" y="28" class="title" fill="#c2410c">Backhand</text>
+    <text x="16" y="50" class="sub">You: 3.6 winners · Pros: 5.8</text>
+    <text x="16" y="68" class="sub">Gap: -2.2 winners.</text>
+    <text x="16" y="86" class="sub" font-style="italic">Mostly errors — focus on stability before power.</text>
+  </g>
+  <g transform="translate(852,504)">
+    <rect width="372" height="100" rx="8" fill="#f0fdf4" stroke="#bbf7d0"/>
+    <text x="16" y="28" class="title" fill="#15803d">Bandeja</text>
+    <text x="16" y="50" class="sub">You: 5.3 winners · Pros: 4.2</text>
+    <text x="16" y="68" class="sub">You are above the pro average. Keep using it.</text>
+  </g>
+  <text x="852" y="640" class="ann">Annotations &amp; color (red→amber→green) drive the focus to the biggest opportunity.</text>
+  <text x="32" y="790" class="ann">Wireframe 5 of 5 — Compare (your shot mix overlaid on the pro average)</text>
+</svg>

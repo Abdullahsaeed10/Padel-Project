@@ -1,0 +1,34 @@
+[21:50:39] === PadelLens real-data fetch, season 2026 ===
+[21:54:44] === PadelLens real-data fetch, season 2026 ===
+[21:54:52] Seasons visible: [(5, 'Premier Padel 2026'), (6, 'Cupra FIP Tour 2026'), (3, 'Padel FIP 2025'), (2, 'Padel FIP 2024'), (4, 'World Padel Tour 2023'), (1, 'Padel FIP 2023'), (23, 'World Padel Tour 2022'), (22, 'World Padel Tour 2021'), (21, 'World Padel Tour 2020'), (20, 'World Padel Tour 2019'), (19, 'World Padel Tour 2018'), (18, 'World Padel Tour 2017'), (17, 'World Padel Tour 2016'), (16, 'World Padel Tour 2015'), (15, 'World Padel Tour 2014')]
+[21:54:52] Using season identifier: 5
+[21:54:59] Season 2026: 26 tournaments
+[21:55:22]   Riyadh Season P1 2026: fetched 94 matches
+[21:55:37]   Gijón P2 2026: fetched 62 matches
+[21:55:51]   Cancún P2 2026: fetched 62 matches
+[21:56:05]   Miami P1 2026: fetched 94 matches
+[21:56:20]   Newgiza P2 2026: fetched 62 matches
+[21:56:34]   Brussels P2 2026: fetched 62 matches
+[21:56:48]   Asunción P2 2026: fetched 62 matches
+[21:57:02]   Buenos Aires P1 2026: fetched 94 matches
+[21:57:22]   Italy Major 2026: fetched 126 matches
+[21:57:36]   Valencia P1 2026: fetched 94 matches
+[21:57:50]   Valladolid P2 2026: fetched 62 matches
+[21:58:05]   Bordeaux P2 2026: fetched 62 matches
+[21:58:19]   Málaga P1 2026: fetched 94 matches
+[21:58:26]   Pretoria P2 2026: fetched 0 matches
+[21:58:32]   London P1 2026: fetched 0 matches
+[21:58:39]   Mediterranean Games 2026: fetched 0 matches
+[21:58:46]   Madrid P1 2026: fetched 0 matches
+[21:58:53]   Paris Major 2026: fetched 0 matches
+[21:58:59]   Rotterdam P2 2026: fetched 0 matches
+[21:59:06]   Germany P2 2026: fetched 0 matches
+[21:59:13]   Milano P1 2026: fetched 0 matches
+[21:59:20]   Kuwait P1 2026: fetched 0 matches
+[21:59:26]   FIP World Cup 2026: fetched 0 matches
+[21:59:33]   Dubai P1 2026: fetched 0 matches
+[21:59:40]   Mexico Major 2026: fetched 0 matches
+[21:59:47]   Barcelona Finals 2026: fetched 0 matches
+[22:04:56] Players fetched: 2165
+[22:04:56] DONE — 776 real match rows → real/pro_matches_real.csv, 2165 players → real/pro_players_real.csv
+[22:04:56] Hidden/free-plan-masked and unfinished matches were skipped, never guessed.

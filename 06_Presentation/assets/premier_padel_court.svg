@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200">
+  <defs>
+    <linearGradient id="arena" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#0A2540"/>
+      <stop offset="1" stop-color="#0E3A66"/>
+    </linearGradient>
+    <linearGradient id="court" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#1769C7"/>
+      <stop offset="1" stop-color="#125AAE"/>
+    </linearGradient>
+  </defs>
+  <rect x="0" y="0" width="1200" height="1200" rx="28" fill="url(#arena)"/>
+  <!-- glass court frame -->
+  <rect x="362" y="132" width="476" height="936" rx="10" fill="url(#court)" stroke="#BBD9FF" stroke-width="6" stroke-opacity="0.85"/>
+  <!-- outer boundary -->
+  <rect x="370" y="140" width="460" height="920" fill="none" stroke="#FFFFFF" stroke-width="5"/>
+  <!-- net band -->
+  <rect x="362" y="594" width="476" height="12" fill="#E8F1FF" opacity="0.95"/>
+  <line x1="370" y1="600" x2="830" y2="600" stroke="#FFFFFF" stroke-width="3" stroke-dasharray="6 8" opacity="0.8"/>
+  <!-- service lines (3m from each back wall) -->
+  <line x1="370" y1="278" x2="830" y2="278" stroke="#FFFFFF" stroke-width="5"/>
+  <line x1="370" y1="922" x2="830" y2="922" stroke="#FFFFFF" stroke-width="5"/>
+  <!-- centre service lines -->
+  <line x1="600" y1="278" x2="600" y2="600" stroke="#FFFFFF" stroke-width="5"/>
+  <line x1="600" y1="600" x2="600" y2="922" stroke="#FFFFFF" stroke-width="5"/>
+  <!-- players: top team -->
+  <circle cx="490" cy="210" r="20" fill="#FFFFFF" stroke="#0A2540" stroke-width="4"/>
+  <circle cx="710" cy="210" r="20" fill="#FFFFFF" stroke="#0A2540" stroke-width="4"/>
+  <!-- players: bottom team -->
+  <circle cx="490" cy="990" r="20" fill="#0EA5E9" stroke="#0A2540" stroke-width="4"/>
+  <circle cx="710" cy="990" r="20" fill="#0EA5E9" stroke="#0A2540" stroke-width="4"/>
+  <!-- ball -->
+  <circle cx="640" cy="560" r="11" fill="#E6FB4A" stroke="#0A2540" stroke-width="2"/>
+</svg>

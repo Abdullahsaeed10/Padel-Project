@@ -1,0 +1,13 @@
+# Course lecture materials — not mine to publish
+all info/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Local artifacts
+*.tmp
+.~lock*
+06_Presentation/qa/
+05_App/PadelLens/data/padellens.db

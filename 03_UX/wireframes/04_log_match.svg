@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 800" font-family="Inter, Arial, sans-serif">
+  <style>
+    .card { fill:#fff; stroke:#cfd6dd; stroke-width:1; }
+    .ph { fill:#e7ecf0; stroke:#cfd6dd; }
+    .label { font-size:11px; fill:#7b8694; letter-spacing:0.3px; }
+    .title { font-size:14px; font-weight:600; fill:#2a3340; }
+    .sub { font-size:12px; fill:#6b7280; }
+    .nav { font-size:13px; fill:#374151; }
+    .ann { font-size:10px; fill:#9aa3ad; font-style:italic; }
+    .field { font-size:12px; fill:#374151; }
+  </style>
+  <rect width="1280" height="800" fill="#f6f8fa"/>
+  <rect x="0" y="0" width="1280" height="64" fill="#ffffff" stroke="#e1e5ea"/>
+  <text x="32" y="40" class="title" font-size="18">PadelLens</text>
+  <g class="nav">
+    <text x="260" y="40">Home</text>
+    <text x="320" y="40">Pro Tour</text>
+    <text x="395" y="40">My Stats</text>
+    <text x="470" y="40" font-weight="600" fill="#0ea5e9">Log a Match</text>
+    <text x="565" y="40">Compare</text>
+  </g>
+  <text x="32" y="108" class="title" font-size="22" fill="#1f2937">Log a match</text>
+  <text x="32" y="130" class="sub">Takes about 90 seconds. Use a default and fix it next time.</text>
+  <!-- Form card -->
+  <rect x="32" y="156" width="780" height="612" rx="10" class="card"/>
+  <!-- Section: when & where -->
+  <text x="56" y="190" class="label">WHEN &amp; WHERE</text>
+  <g transform="translate(56,202)">
+    <text x="0" y="20" class="field">Date</text>
+    <rect x="0" y="28" width="220" height="36" rx="6" class="ph"/>
+    <text x="12" y="50" class="sub">28 Apr 2025</text>
+    <text x="240" y="20" class="field">Club</text>
+    <rect x="240" y="28" width="220" height="36" rx="6" class="ph"/>
+    <text x="252" y="50" class="sub">Padel Milano Navigli ⌄</text>
+    <text x="480" y="20" class="field">Surface</text>
+    <rect x="480" y="28" width="100" height="36" rx="18" fill="#0ea5e9"/>
+    <text x="530" y="50" fill="#fff" font-size="12" text-anchor="middle">Indoor</text>
+    <rect x="588" y="28" width="100" height="36" rx="18" class="ph"/>
+    <text x="638" y="50" class="sub" text-anchor="middle">Outdoor</text>
+  </g>
+  <line x1="56" y1="294" x2="788" y2="294" stroke="#eef0f3"/>
+  <!-- Section: players -->
+  <text x="56" y="322" class="label">PLAYERS</text>
+  <g transform="translate(56,334)">
+    <text x="0" y="20" class="field">My partner</text>
+    <rect x="0" y="28" width="320" height="36" rx="6" class="ph"/>
+    <text x="12" y="50" class="sub">Luca ⌄</text>
+    <text x="340" y="20" class="field">Opponents</text>
+    <rect x="340" y="28" width="380" height="36" rx="6" class="ph"/>
+    <text x="352" y="50" class="sub">Federico &amp; Tommaso</text>
+  </g>
+  <line x1="56" y1="406" x2="788" y2="406" stroke="#eef0f3"/>
+  <!-- Section: score -->
+  <text x="56" y="434" class="label">SCORE</text>
+  <g transform="translate(56,446)">
+    <text x="0" y="20" class="field">Set 1</text>
+    <rect x="0" y="28" width="60" height="36" rx="6" class="ph"/>
+    <text x="30" y="50" class="sub" text-anchor="middle">6</text>
+    <text x="68" y="50" class="sub">—</text>
+    <rect x="84" y="28" width="60" height="36" rx="6" class="ph"/>
+    <text x="114" y="50" class="sub" text-anchor="middle">3</text>
+    <text x="170" y="20" class="field">Set 2</text>
+    <rect x="170" y="28" width="60" height="36" rx="6" class="ph"/>
+    <text x="200" y="50" class="sub" text-anchor="middle">6</text>
+    <text x="238" y="50" class="sub">—</text>
+    <rect x="254" y="28" width="60" height="36" rx="6" class="ph"/>
+    <text x="284" y="50" class="sub" text-anchor="middle">4</text>
+    <text x="340" y="20" class="field">Set 3 (optional)</text>
+    <rect x="340" y="28" width="60" height="36" rx="6" class="ph"/>
+    <text x="370" y="50" class="sub" text-anchor="middle">–</text>
+    <text x="408" y="50" class="sub">—</text>
+    <rect x="424" y="28" width="60" height="36" rx="6" class="ph"/>
+    <text x="454" y="50" class="sub" text-anchor="middle">–</text>
+    <text x="520" y="50" class="sub" font-style="italic">Auto: W (straight sets)</text>
+  </g>
+  <line x1="56" y1="518" x2="788" y2="518" stroke="#eef0f3"/>
+  <!-- Section: shot tallies -->
+  <text x="56" y="546" class="label">SHOT TALLIES (OPTIONAL · FOR DEEPER ANALYTICS)</text>
+  <g transform="translate(56,558)">
+    <!-- table-like -->
+    <text x="0" y="20" class="sub">Shot</text>
+    <text x="180" y="20" class="sub">Winners</text>
+    <text x="320" y="20" class="sub">Errors</text>
+    <g transform="translate(0,32)">
+      <text x="0" y="20" class="field">Forehand</text>      <rect x="160" y="0" width="80" height="32" rx="6" class="ph"/> <text x="200" y="20" class="sub" text-anchor="middle">7</text>  <rect x="300" y="0" width="80" height="32" rx="6" class="ph"/> <text x="340" y="20" class="sub" text-anchor="middle">3</text>
+    </g>
+    <g transform="translate(0,72)">
+      <text x="0" y="20" class="field">Backhand</text>      <rect x="160" y="0" width="80" height="32" rx="6" class="ph"/> <text x="200" y="20" class="sub" text-anchor="middle">4</text>  <rect x="300" y="0" width="80" height="32" rx="6" class="ph"/> <text x="340" y="20" class="sub" text-anchor="middle">6</text>
+    </g>
+    <g transform="translate(0,112)">
+      <text x="0" y="20" class="field">Smash</text>         <rect x="160" y="0" width="80" height="32" rx="6" class="ph"/> <text x="200" y="20" class="sub" text-anchor="middle">2</text>  <rect x="300" y="0" width="80" height="32" rx="6" class="ph"/> <text x="340" y="20" class="sub" text-anchor="middle">6</text>
+    </g>
+    <g transform="translate(420,32)">
+      <text x="0" y="20" class="field">Volley</text>        <rect x="160" y="0" width="80" height="32" rx="6" class="ph"/> <text x="200" y="20" class="sub" text-anchor="middle">5</text>  <rect x="300" y="0" width="0" height="32" rx="6" class="ph"/>
+    </g>
+    <g transform="translate(420,72)">
+      <text x="0" y="20" class="field">Bandeja</text>       <rect x="160" y="0" width="80" height="32" rx="6" class="ph"/> <text x="200" y="20" class="sub" text-anchor="middle">8</text>
+    </g>
+  </g>
+  <!-- Submit -->
+  <rect x="56" y="716" width="220" height="44" rx="8" fill="#0ea5e9"/>
+  <text x="166" y="744" fill="#fff" font-size="14" text-anchor="middle" font-weight="600">Save match</text>
+  <text x="290" y="744" class="sub">or Esc to cancel</text>
+  <!-- Side help -->
+  <rect x="828" y="156" width="420" height="612" rx="10" class="card"/>
+  <text x="852" y="190" class="label">HELP</text>
+  <text x="852" y="216" class="title">Why this matters</text>
+  <text x="852" y="240" class="sub">The shot tallies are optional. Just</text>
+  <text x="852" y="258" class="sub">filling date + score + partner is enough</text>
+  <text x="852" y="276" class="sub">for the basic charts.</text>
+  <text x="852" y="316" class="title">Tip</text>
+  <text x="852" y="340" class="sub">Estimate roughly — 5-10 winners and</text>
+  <text x="852" y="358" class="sub">5-10 errors per set is normal at the</text>
+  <text x="852" y="376" class="sub">amateur level.</text>
+  <text x="852" y="420" class="title">Privacy</text>
+  <text x="852" y="444" class="sub">Logs stay on your machine. Nothing</text>
+  <text x="852" y="462" class="sub">is sent to a server.</text>
+  <text x="852" y="510" class="ann">Match Nielsen #1 (system status) by showing the auto-computed result inline as you type the score.</text>
+  <text x="32" y="790" class="ann">Wireframe 4 of 5 — Log a Match (data entry form, ≤ 90s target)</text>
+</svg>
