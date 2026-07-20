@@ -1,0 +1,11 @@
+# Secrets — never commit the API token
+.streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Generated locally by build_db.py — regenerate, don't commit
+data/padellens.db
