@@ -173,19 +173,6 @@ def render_momentum(pro_matches: pd.DataFrame, pro_players: pd.DataFrame):
     st.plotly_chart(themed_fig(fig), use_container_width=True,
                     config={"displayModeBar": False})
 
-    caption = (
-        f"Method: analytics.momentum_table on the real 2026 feed, Wilson 95% CI per group "
-        f"(error bars); grouped by tour category and tournament level in place of court "
-        f"surface (this replaces the surface split so the chart doesn't break on it). "
-        f"n per group: " + ", ".join(f"{g}={n}" for g, n in zip(groups, lost_n)) + ". "
-    )
-    if decider:
-        caption += (
-            f"Deciding-set check: of {decider['n']} matches that reached a valid third set, "
-            f"the set-1 winner also won set 3 in {decider['wins']} ({decider['rate']*100:.0f}%, "
-            f"Wilson 95% CI {decider['ci_lo']*100:.0f}-{decider['ci_hi']*100:.0f}%) — the "
-            f"interval straddles 50%, so the set-1 edge does not carry into the decider.")
-    section_caption(caption)
 
 
 def render_elo_vs_ranking(pro_matches: pd.DataFrame, pro_players: pd.DataFrame):
@@ -240,13 +227,6 @@ def render_elo_vs_ranking(pro_matches: pd.DataFrame, pro_players: pd.DataFrame):
     )
     st.plotly_chart(themed_fig(fig), use_container_width=True,
                     config={"displayModeBar": False})
-    section_caption(
-        f"Method: analytics.compute_elo (K=32, base=1500) over n={len(pro_matches)} "
-        f"matches, joined to pro_players.ranking_points; both axes shown as "
-        f"percentile rank (n_players={len(merged)}) since Elo and ranking points "
-        f"are on very different scales. Over/under-performer callouts restricted to "
-        f"players with >=10 matches ({len(experienced)} of {len(merged)}) to avoid "
-        f"small-sample Elo noise.")
 
 
 def render_chemistry(pro_matches: pd.DataFrame, pro_players: pd.DataFrame):
@@ -283,10 +263,6 @@ def render_chemistry(pro_matches: pd.DataFrame, pro_players: pd.DataFrame):
     )
     st.plotly_chart(themed_fig(fig), use_container_width=True,
                     config={"displayModeBar": False})
-    section_caption(
-        f"Method: analytics.pair_chemistry, Wilson 95% CI per bucket (error bars); "
-        f"n shown on each bar. Buckets partition every (pair, match) row, so they "
-        f"sum to {int(buckets['n'].sum())} = 2 x {pro_matches['match_id'].nunique()} matches.")
 
 
 def render_calibration(pro_matches: pd.DataFrame, pro_players: pd.DataFrame):
@@ -325,11 +301,6 @@ def render_calibration(pro_matches: pd.DataFrame, pro_players: pd.DataFrame):
     )
     st.plotly_chart(themed_fig(fig), use_container_width=True,
                     config={"displayModeBar": False})
-    section_caption(
-        f"Method: analytics.fit_win_model (logistic regression on ranking_gap / "
-        f"height_gap / surface_indoor), n_used={result['n_used']} of "
-        f"n_total={result['n_total']} matches with complete player data; points "
-        f"are deciles of predicted probability.")
 
 
 def render_upsets(pro_matches: pd.DataFrame, pro_players: pd.DataFrame):
@@ -404,13 +375,6 @@ def render_upsets(pro_matches: pd.DataFrame, pro_players: pd.DataFrame):
     )
     st.plotly_chart(themed_fig(fig), use_container_width=True,
                     config={"displayModeBar": False})
-    section_caption(
-        f"Method: upset = winner's numeric seed > loser's numeric seed (both teams "
-        f"numerically seeded; WC/Q/LL/LLI/unseeded matches excluded). Two-sided binomial "
-        f"test vs 50%, p<0.001. Wilson 95% CI per round. n={n_total} seeded finished matches "
-        f"overall ({n_upset} upsets, {overall_rate*100:.1f}%, CI {overall_lo*100:.1f}-"
-        f"{overall_hi*100:.1f}%); per round: " +
-        ", ".join(f"{r}={n}" for r, n in zip(table["round"], table["n"])) + ".")
 
 
 def render_efficiency(pro_matches: pd.DataFrame, pro_players: pd.DataFrame):
@@ -456,12 +420,6 @@ def render_efficiency(pro_matches: pd.DataFrame, pro_players: pd.DataFrame):
     )
     st.plotly_chart(themed_fig(fig), use_container_width=True,
                     config={"displayModeBar": False})
-    section_caption(
-        f"Method: two-sided binomial test vs 50% on whether the team that played fewer "
-        f"total games in its previous round (same tournament) wins the next match; "
-        f"n={n} team-observations with a known previous-round game count, p=0.004. Wilson "
-        f"95% CI per bar. Verified count reused from 02_Data/eda/eda_results.json (E8) "
-        f"rather than recomputed in-app.")
 
 
 def render_home_null(pro_matches: pd.DataFrame, pro_players: pd.DataFrame):
@@ -510,12 +468,6 @@ def render_home_null(pro_matches: pd.DataFrame, pro_players: pd.DataFrame):
     )
     st.plotly_chart(themed_fig(fig), use_container_width=True,
                     config={"displayModeBar": False})
-    section_caption(
-        f"Method: home = at least one player's nationality equals the tournament host "
-        f"country; matches where both or neither team was home are excluded. n={n} matches "
-        f"with exactly one home team, two-sided binomial test vs 50%, p=0.18 (not "
-        f"significant). Numbers reused from 02_Data/eda/eda_results.json (E9) rather than "
-        f"re-derived independently — an honest null deserves the same rigor as a signal.")
 
 
 RENDERERS = {
