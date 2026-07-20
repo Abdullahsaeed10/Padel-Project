@@ -11,3 +11,4 @@ __pycache__/
 .~lock*
 06_Presentation/qa/
 05_App/PadelLens/data/padellens.db
+05_App/PadelLens/.git_old_backup/
