@@ -2,10 +2,10 @@
   {
     "id": "momentum",
     "title": "The first set (almost) decides the match",
-    "question": "Overall, and split by tour category and tournament level, how much does taking the first set shift a pair's probability of winning the match — and does that edge survive if the match reaches a third set?",
+    "question": "Overall, and split by tour category and tournament level, how much does taking the first set shift a pair's probability of winning the match  -  and does that edge survive if the match reaches a third set?",
     "status": "ready",
-    "method": "analytics.momentum_table on the real 2026 feed — Wilson 95% CI on P(match winner == set-1 winner), overall (n=668) and grouped by tour category and level (two-sided binomial test vs 50%, p<0.001). Deciding-set reset checked directly on set1 vs set3 winners (n=153).",
-    "takeaway": "Set-1 winners take the match 86% of the time (n=668, p<0.001), consistent across gender and level. But when a match does reach a decider, the set-1 winner wins set 3 only ~49% of the time — momentum resets in the third set.",
+    "method": "analytics.momentum_table on the real 2026 feed  -  Wilson 95% CI on P(match winner == set-1 winner), overall (n=668) and grouped by tour category and level (two-sided binomial test vs 50%, p<0.001). Deciding-set reset checked directly on set1 vs set3 winners (n=153).",
+    "takeaway": "Set-1 winners take the match 86% of the time (n=668, p<0.001), consistent across gender and level. But when a match does reach a decider, the set-1 winner wins set 3 only ~49% of the time  -  momentum resets in the third set.",
     "data_source": "padelapi.org 2026 season (real)"
   },
   {
@@ -13,14 +13,14 @@
     "title": "Playing together is worth ~27 points of win rate",
     "question": "Does a pair's win rate rise with the number of matches they've played together, controlling only for how much experience they have as a pair (1-3, 4-8, 9-15, 16+ matches)?",
     "status": "ready",
-    "method": "analytics.pair_chemistry on the real 2026 feed — bucketed win rate by matches-together-so-far, Wilson 95% CI per bucket; chi-square test of independence across buckets, n=1526 (pair, match) rows, p<0.001.",
-    "takeaway": "Pairs in their first 3 matches together win ~40% of matches; pairs with 16+ matches together win ~67% (p<0.001). Caveat: survivorship — unsuccessful pairs split before accumulating matches.",
+    "method": "analytics.pair_chemistry on the real 2026 feed  -  bucketed win rate by matches-together-so-far, Wilson 95% CI per bucket; chi-square test of independence across buckets, n=1526 (pair, match) rows, p<0.001.",
+    "takeaway": "Pairs in their first 3 matches together win ~40% of matches; pairs with 16+ matches together win ~67% (p<0.001). Caveat: survivorship  -  unsuccessful pairs split before accumulating matches.",
     "data_source": "padelapi.org 2026 season (real)"
   },
   {
     "id": "calibration",
-    "title": "Rankings predict — but don't decide",
-    "question": "When analytics.fit_win_model predicts a given chance a team wins, do teams like that actually win about that often — and how far does official ranking alone get you?",
+    "title": "Rankings predict  -  but don't decide",
+    "question": "When analytics.fit_win_model predicts a given chance a team wins, do teams like that actually win about that often  -  and how far does official ranking alone get you?",
     "status": "ready",
     "method": "Logistic regression of match outcome on log(team1_points/team2_points) over the real 2026 feed, n=763 finished matches, AUC=0.88; favorite (higher combined ranking points) win rate 78.5% (two-sided binomial test vs 50%, p<0.001). analytics.fit_win_model's decile calibration (ranking_gap / height_gap / surface_indoor) is shown in-app on the same real data.",
     "takeaway": "The team with more combined ranking points wins 78.5% of matches (AUC 0.88). Strong signal, far from destiny. Caveat: points are an end-of-window snapshot, not match-date values.",
@@ -29,7 +29,7 @@
   {
     "id": "elo_vs_ranking",
     "title": "What Elo sees that the ranking doesn't",
-    "question": "Which players' match-derived Elo rating (from analytics.compute_elo) is most out of step with their official ranking points — who is over- or under-rated by the official system?",
+    "question": "Which players' match-derived Elo rating (from analytics.compute_elo) is most out of step with their official ranking points  -  who is over- or under-rated by the official system?",
     "status": "ready",
     "method": "analytics.compute_elo (K=32, base=1500) run chronologically over all 776 real 2026 matches, joined to pro_players_real.csv official points by player id (all 279 match participants matched). Restricted to players with >=10 matches (122 of 279) to avoid small-sample Elo noise, then compared each player's Elo-based rank position to their official-points rank position.",
     "takeaway": "An Elo rating built purely from 2026 results broadly tracks official points, but flags over-performers the ranking underrates: Juan Ignacio De Pascual (Elo rank #35 vs points rank #103, n=16 matches), Alonso Rodriguez Martinez (Elo rank #35 vs points rank #101, n=16 matches), and Ramiro Valenzuela (Elo rank #58 vs points rank #121, n=10 matches).",
@@ -38,25 +38,25 @@
   {
     "id": "upsets",
     "title": "Upsets are rarer than they feel",
-    "question": "Among seeded matches, how often does the worse-seeded team actually win — and does that rate vary by round?",
+    "question": "Among seeded matches, how often does the worse-seeded team actually win  -  and does that rate vary by round?",
     "status": "ready",
-    "method": "Winner's numeric seed > loser's numeric seed, both teams numerically seeded (WC/Q/LL/LLI/blank excluded) — n=165 of 763 finished matches. Two-sided binomial test vs 50%, p<0.001. Wilson 95% CI per round.",
-    "takeaway": "Only 22.4% of seeded matches end in an upset (p<0.001 vs 50%), and the rate is far from uniform by round: it's lowest in the semifinals (14%, n=43) and the Round of 16 (16%, n=31), roughly doubles in the quarterfinals (21%, n=67), and jumps to a coin flip in the final (50%, n=24) — finals are where the seeding gap matters least, not most.",
+    "method": "Winner's numeric seed > loser's numeric seed, both teams numerically seeded (WC/Q/LL/LLI/blank excluded)  -  n=165 of 763 finished matches. Two-sided binomial test vs 50%, p<0.001. Wilson 95% CI per round.",
+    "takeaway": "Only 22.4% of seeded matches end in an upset (p<0.001 vs 50%), and the rate is far from uniform by round: it's lowest in the semifinals (14%, n=43) and the Round of 16 (16%, n=31), roughly doubles in the quarterfinals (21%, n=67), and jumps to a coin flip in the final (50%, n=24)  -  finals are where the seeding gap matters least, not most.",
     "data_source": "padelapi.org 2026 season (real)"
   },
   {
     "id": "efficiency",
     "title": "Winning fast pays forward",
-    "question": "Does spending fewer games winning your previous round give you an edge in the next match — an on-court efficiency or fatigue signal?",
+    "question": "Does spending fewer games winning your previous round give you an edge in the next match  -  an on-court efficiency or fatigue signal?",
     "status": "ready",
     "method": "Two-sided binomial test vs 50% on whether the team that played fewer total games in its previous round (same tournament) wins the next match; n=233 team-observations with a known previous-round game count, p=0.004. Wilson 95% CI per bar.",
-    "takeaway": "The team that spent fewer total games in its previous round wins 59.7% of the next match (n=233, p=0.004) — an on-court efficiency/fatigue signal.",
+    "takeaway": "The team that spent fewer total games in its previous round wins 59.7% of the next match (n=233, p=0.004)  -  an on-court efficiency/fatigue signal.",
     "data_source": "padelapi.org 2026 season (real)"
   },
   {
     "id": "home_null",
-    "title": "No home advantage — an honest null",
-    "question": "Do players competing in their home country win more often — or is 'home advantage' in padel a myth?",
+    "title": "No home advantage  -  an honest null",
+    "question": "Do players competing in their home country win more often  -  or is 'home advantage' in padel a myth?",
     "status": "ready",
     "method": "Home = at least one player's nationality equals the tournament host country; matches where both or neither team was home are excluded (654 of 763). n=109 matches with exactly one home team, two-sided binomial test vs 50%, p=0.18.",
     "takeaway": "Teams playing in their home country won only 43% of home-vs-away matches (n=109, p=0.18, not significant). We report this null openly: trustworthy analysis includes what the data does NOT show.",

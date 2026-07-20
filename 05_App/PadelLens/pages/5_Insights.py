@@ -58,7 +58,7 @@ pro_matches = db.load_pro_matches()
 pro_players = db.load_pro_players()
 
 try:
-    findings = json.loads(FINDINGS_PATH.read_text())
+    findings = json.loads(FINDINGS_PATH.read_text(encoding="utf-8"))
 except FileNotFoundError:
     findings = []
     st.error("data/findings.json is missing — no discovery cards to show.")

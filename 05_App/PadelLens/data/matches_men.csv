@@ -1,45 +1,50 @@
 date,tournament,level,round,round_name,team1,team2,score,winner,duration_min,n_sets,status,category
-2026-06-25,FIP Gold Abidjan,FIP Gold,16,Round of 32,Jad Jaafar / Khalil Abass,Luis Ortega Perez / Fakhry Wael,3-6 · 2-6,Luis Ortega Perez / Fakhry Wael,,2,finished,men
-2026-06-25,FIP Gold Abidjan,FIP Gold,16,Round of 32,Fran Ramirez Navas / Fakih Najib,Alberto Simon Garcia / Mohamed Michel Hussein Khachab,6-1 · 6-0,Fran Ramirez Navas / Fakih Najib,,2,finished,men
-2026-06-25,FIP Gold Abidjan,FIP Gold,16,Round of 32,Fakhry Hassan / Samir Wazni,Maher Hachem / Youssef Ait Oumelloul,0-6 · 2-6,Maher Hachem / Youssef Ait Oumelloul,,2,finished,men
-2026-06-25,FIP Gold Abidjan,FIP Gold,16,Round of 32,Dany Ryan El Riz / Wael Franzen Bourgi,Valentin Durand / Victor Lethuilier,1-6 · 2-6,Valentin Durand / Victor Lethuilier,,2,finished,men
-2026-06-25,FIP Gold Abidjan,FIP Gold,16,Round of 32,Guillem Figuerola Santiago / Anthony Hyjazi,Dylan Guichard / Clement Geens,3-6 · 3-6,Dylan Guichard / Clement Geens,,2,finished,men
-2026-06-24,Valladolid P2 2026,P2,16,Round of 32,Alex Chozas / Tino Libaak,Maxi Sanchez Blasco / Sanyo Gutierrez,6-4 · 7-6(6),Alex Chozas / Tino Libaak,224.0,2,finished,men
-2026-06-24,Valladolid P2 2026,P2,16,Round of 32,Pablo Garcia Rodrigo / Pablo Lijo,Alfonso Sanchez Arriaga / Samuel Rivas Garcia,6-3 · 6-1,Pablo Garcia Rodrigo / Pablo Lijo,56.0,2,finished,men
-2026-06-24,Valladolid P2 2026,P2,16,Round of 32,Inigo Jofre / Jairo Bautista,Jon Sanz / Jorge Nieto,7-5 · 2-1,Inigo Jofre / Jairo Bautista,54.0,2,retired,men
-2026-06-24,Valladolid P2 2026,P2,16,Round of 32,Lucas Campagnolo / Momo Gonzalez,Victor Ruiz / Mario Ortega,6-3 · 6-1,Lucas Campagnolo / Momo Gonzalez,168.0,2,finished,men
-2026-06-24,Valladolid P2 2026,P2,16,Round of 32,Pedro Perry / Juan Zamora Perez,Alex Ruiz / Juanlu Esbri,2-6 · 4-6,Alex Ruiz / Juanlu Esbri,66.0,2,finished,men
-2026-06-24,Valladolid P2 2026,P2,16,Round of 32,Marc Sintes Villalonga / Daniel Santigosa,Pol Hernandez / Guillermo Collado,6-4 · 5-7 · 0-6,Pol Hernandez / Guillermo Collado,233.0,3,finished,men
-2026-06-24,Valladolid P2 2026,P2,16,Round of 32,Alejandro Arroyo / Tolito Aguirre,Francisco Gil / Manuel Castaño,6-4 · 3-6 · 3-6,Francisco Gil / Manuel Castaño,119.0,3,finished,men
-2026-06-24,Valladolid P2 2026,P2,16,Round of 32,Aimar Goñi / Edu Alonso,Alonso Rodriguez Martinez / Juan Ignacio De Pascual,6(4)-7 · 4-6,Alonso Rodriguez Martinez / Juan Ignacio De Pascual,91.0,2,finished,men
-2026-06-24,Valladolid P2 2026,P2,16,Round of 32,Martin Di Nenno / Francisco Navarro,Jose Jimenez / Javier Garcia,7-5 · 6-4,Martin Di Nenno / Francisco Navarro,82.0,2,finished,men
-2026-06-24,Valladolid P2 2026,P2,16,Round of 32,Rodrigo Coello Manso / Adam Axelsson,David Gala / Enzo Jensen,7-5 · 7-6(4),Rodrigo Coello Manso / Adam Axelsson,96.0,2,finished,men
-2026-06-23,Valladolid P2 2026,P2,16,Round of 32,Javier Ruiz / Gonzalo Rubio,Francisco Guerrero / Javier Leal,7-6(4) · 2-6 · 3-6,Francisco Guerrero / Javier Leal,125.0,3,finished,men
-2026-06-23,Valladolid P2 2026,P2,16,Round of 32,Jose Antonio Diestro / Ignacio Piotto,Luis Hernandez / Javier Martinez,3-6 · 4-6,Luis Hernandez / Javier Martinez,63.0,2,finished,men
-2026-06-21,FIP Platinum Lusitania Portugal Master Padel,FIP Platinum,1,Finals,Sanyo Gutierrez / Maxi Sanchez Blasco,Maximiliano Arce / Juan Tello,4-6 · 2-6,Maximiliano Arce / Juan Tello,,2,finished,men
-2026-06-21,FIP Silver Narbona,FIP Silver,2,Semifinals,Benjamin Tison / Ferran Insa Sotillo,Maximo Jesus Maldonado / Franco Dal Bianco,3-6 · 0-6,Maximo Jesus Maldonado / Franco Dal Bianco,,2,finished,men
-2026-06-21,FIP Silver Narbona,FIP Silver,2,Semifinals,Martin Abud / Marcos Gonzalez Blanco,Mariano Agustin Gonzalez San Martin / Francisco Cabeza Teres,7-6 · 6-7 · 6-3,Martin Abud / Marcos Gonzalez Blanco,,3,finished,men
-2026-06-21,FIP Silver Narbona,FIP Silver,1,Finals,Maximo Jesus Maldonado / Franco Dal Bianco,Marcos Gonzalez Blanco / Martin Abud,4-6 · 4-6,Marcos Gonzalez Blanco / Martin Abud,,2,finished,men
-2026-06-20,FIP Platinum Lusitania Portugal Master Padel,FIP Platinum,2,Semifinals,Sanyo Gutierrez / Maxi Sanchez Blasco,Javier Garcia / Jose Jimenez,4-6 · 6-3 · 6-2,Sanyo Gutierrez / Maxi Sanchez Blasco,,3,finished,men
-2026-06-20,FIP Platinum Lusitania Portugal Master Padel,FIP Platinum,2,Semifinals,Juan Tello / Maximiliano Arce,Jairo Bautista / Inigo Jofre,4-6 · 6-4 · 6-3,Juan Tello / Maximiliano Arce,,3,finished,men
-2026-06-20,FIP Silver Narbona,FIP Silver,8,Round of 16,Maxi Sanchez / Juan Ignacio Rubini,Alfonso Diaz Ponce / Jaime Lobo Wordsworth,6-3 · 6-4,Maxi Sanchez / Juan Ignacio Rubini,,2,finished,men
-2026-06-20,FIP Silver Narbona,FIP Silver,8,Round of 16,Arthur Hugounenq / Yanis Muesser,Benjamin Tison / Ferran Insa Sotillo,5-7 · 6-7,Benjamin Tison / Ferran Insa Sotillo,,2,finished,men
-2026-06-20,FIP Silver Narbona,FIP Silver,8,Round of 16,Maximo Jesus Maldonado / Franco Dal Bianco,Lucas Pillon / Maxime Joris,6-3 · 6-4,Maximo Jesus Maldonado / Franco Dal Bianco,,2,finished,men
-2026-06-20,FIP Silver Narbona,FIP Silver,8,Round of 16,Theo Suzanna / Tristan Piombo,Boris Castro Garcia / Roberto Belmont Pastor,5-7 · 6-3 · 6-4,Theo Suzanna / Tristan Piombo,,3,finished,men
-2026-06-20,FIP Silver Narbona,FIP Silver,8,Round of 16,Marcos Gonzalez Blanco / Martin Abud,Sergi Guimet Bigas / Bart Van Opstal,6-2 · 7-6,Marcos Gonzalez Blanco / Martin Abud,,2,finished,men
-2026-06-20,FIP Silver Narbona,FIP Silver,8,Round of 16,Hugo Girona Diaz / Pedro Gonzalez Martin,Timeo Fonteny / Yoan Boronad,4-6 · 1-6,Timeo Fonteny / Yoan Boronad,,2,finished,men
-2026-06-20,FIP Silver Narbona,FIP Silver,8,Round of 16,Victor Tur Checa / Agustin Reca,Manuel Vives / Olivier Guy De Chamisso,6-7 · 6-4 · 3-6,Manuel Vives / Olivier Guy De Chamisso,,3,finished,men
-2026-06-20,FIP Silver Narbona,FIP Silver,8,Round of 16,Relis Ferreyra / Mario Rodriguez Marcos,Francisco Cabeza Teres / Mariano Agustin Gonzalez San Martin,3-6 · 2-6,Francisco Cabeza Teres / Mariano Agustin Gonzalez San Martin,,2,finished,men
-2026-06-20,FIP Silver Narbona,FIP Silver,4,Quarter,Juan Ignacio Rubini / Maxi Sanchez,Benjamin Tison / Ferran Insa Sotillo,4-6 · 2-6,Benjamin Tison / Ferran Insa Sotillo,,2,finished,men
-2026-06-20,FIP Silver Narbona,FIP Silver,4,Quarter,Franco Dal Bianco / Maximo Jesus Maldonado,Theo Suzanna / Tristan Piombo,6-0 · 6-0,Franco Dal Bianco / Maximo Jesus Maldonado,,2,finished,men
-2026-06-20,FIP Silver Narbona,FIP Silver,4,Quarter,Martin Abud / Marcos Gonzalez Blanco,Timeo Fonteny / Yoan Boronad,7-6 · 6-3,Martin Abud / Marcos Gonzalez Blanco,,2,finished,men
-2026-06-20,FIP Silver Narbona,FIP Silver,4,Quarter,Manuel Vives / Olivier Guy De Chamisso,Francisco Cabeza Teres / Mariano Agustin Gonzalez San Martin,2-6 · 4-6,Francisco Cabeza Teres / Mariano Agustin Gonzalez San Martin,,2,finished,men
-2026-06-19,FIP Platinum Lusitania Portugal Master Padel,FIP Platinum,4,Quarter,Maxi Sanchez Blasco / Sanyo Gutierrez,Alex Ruiz / Luis Hernandez,7-5 · 6-3,Maxi Sanchez Blasco / Sanyo Gutierrez,,2,finished,men
-2026-06-19,FIP Platinum Lusitania Portugal Master Padel,FIP Platinum,4,Quarter,Emilio Sanchez / Alberto Garcia Trabanco,Javier Garcia / Jose Jimenez,4-6 · 6(4)-7,Javier Garcia / Jose Jimenez,,2,finished,men
-2026-06-19,FIP Platinum Lusitania Portugal Master Padel,FIP Platinum,4,Quarter,Juan Tello / Maximiliano Arce,Alejandro Arroyo / Javier Martinez,6-4 · 6-3,Juan Tello / Maximiliano Arce,,2,finished,men
-2026-06-19,FIP Platinum Lusitania Portugal Master Padel,FIP Platinum,4,Quarter,Jairo Bautista / Inigo Jofre,Edu Alonso / Aimar Goñi,6(5)-7 · 7-6(3) · 7-6(3),Jairo Bautista / Inigo Jofre,,3,finished,men
-2026-06-19,FIP Silver Narbona,FIP Silver,16,Round of 32,Maxi Sanchez / Juan Ignacio Rubini,Alejandro Correa / Nicolas Peña Ruiz,7-6 · 6-2,Maxi Sanchez / Juan Ignacio Rubini,,2,finished,men
-2026-06-19,FIP Silver Narbona,FIP Silver,16,Round of 32,Johan Peloux Marchini / Pierre Perez Le Tiec,Alfonso Diaz Ponce / Jaime Lobo Wordsworth,3-6 · 7-5 · 3-6,Alfonso Diaz Ponce / Jaime Lobo Wordsworth,,3,finished,men
-2026-06-19,FIP Silver Narbona,FIP Silver,16,Round of 32,Arthur Hugounenq / Yanis Muesser,Alvaro Sola Sala / Rafael Marquet,6-4 · 6-2,Arthur Hugounenq / Yanis Muesser,,2,finished,men
-2026-06-19,FIP Silver Narbona,FIP Silver,16,Round of 32,Saul Duran Heras / Eric Romano,Benjamin Tison / Ferran Insa Sotillo,4-6 · 5-7,Benjamin Tison / Ferran Insa Sotillo,,2,finished,men
-2026-06-19,FIP Silver Narbona,FIP Silver,16,Round of 32,Maximo Jesus Maldonado / Franco Dal Bianco,Thomas Vanbauce / Philemon Raichman,3-6 · 6-1 · 6-4,Maximo Jesus Maldonado / Franco Dal Bianco,,3,finished,men
+2026-07-19,-,-,1,Finals,Arturo Coello / Agustin Tapia,Leo Augsburger / Juan Lebron,6-2 · 6-2,Arturo Coello / Agustin Tapia,53.0,2,finished,men
+2026-07-19,FIP Silver Hiscox Padel Irish Open Dublin,FIP Silver,2,Semifinals,Adrian Ronco Lopez / Pepe Aliaga,Diego Dorta Diaz / Alfonso Sanchez Arriaga,6-4 · 6-3,Adrian Ronco Lopez / Pepe Aliaga,,2,finished,men
+2026-07-19,FIP Silver Hiscox Padel Irish Open Dublin,FIP Silver,2,Semifinals,Anton Sans / Gustavo Nunes,Antonio Fernandez / Pedro Melendez Amaya,3-6 · 0-6,Antonio Fernandez / Pedro Melendez Amaya,,2,finished,men
+2026-07-19,FIP Silver Hiscox Padel Irish Open Dublin,FIP Silver,1,Finals,Adrian Ronco Lopez / Pepe Aliaga,Antonio Fernandez / Pedro Melendez Amaya,6-3 · 6-7 · 4-6,Antonio Fernandez / Pedro Melendez Amaya,,3,finished,men
+2026-07-18,-,-,2,Semifinals,Arturo Coello / Agustin Tapia,Martin Di Nenno / Francisco Navarro,6-4 · 6-3,Arturo Coello / Agustin Tapia,76.0,2,finished,men
+2026-07-18,-,-,2,Semifinals,Juan Lebron / Leo Augsburger,Alejandro Galan / Federico Chingotto,2-6 · 6-3 · 7-6(7),Juan Lebron / Leo Augsburger,144.0,3,finished,men
+2026-07-18,FIP Silver Hiscox Padel Irish Open Dublin,FIP Silver,8,Round of 16,Matteo Rosingana / Simone Vaccari,Arthur Hugounenq / Yanis Muesser,6-2 · 2-6 · 7-6,Matteo Rosingana / Simone Vaccari,,3,finished,men
+2026-07-18,FIP Silver Hiscox Padel Irish Open Dublin,FIP Silver,8,Round of 16,Jaime Menendez / Filippo Nicocia,Adrian Ronco Lopez / Pepe Aliaga,3-6 · 2-6,Adrian Ronco Lopez / Pepe Aliaga,,2,finished,men
+2026-07-18,FIP Silver Hiscox Padel Irish Open Dublin,FIP Silver,8,Round of 16,Diego Dorta Diaz / Alfonso Sanchez Arriaga,Charlie Götke / Jake Bewley,6-0 · 6-3,Diego Dorta Diaz / Alfonso Sanchez Arriaga,,2,finished,men
+2026-07-18,FIP Silver Hiscox Padel Irish Open Dublin,FIP Silver,8,Round of 16,Alexander Loughlan / Louie Harris,Guillem Figuerola Santiago / Roberto Belmont Pastor,6-7 · 7-5 · 4-6,Guillem Figuerola Santiago / Roberto Belmont Pastor,,3,finished,men
+2026-07-18,FIP Silver Hiscox Padel Irish Open Dublin,FIP Silver,8,Round of 16,Anton Sans / Gustavo Nunes,Simon Dvorak / Jonas Jan Hoffman,6-0 · 6-0,Anton Sans / Gustavo Nunes,,2,finished,men
+2026-07-18,FIP Silver Hiscox Padel Irish Open Dublin,FIP Silver,8,Round of 16,Victor Tur Checa / Agustin Reca,Oscar Jacobson / Oliver Jacobson,6-1 · 6-1,Victor Tur Checa / Agustin Reca,,2,finished,men
+2026-07-18,FIP Silver Hiscox Padel Irish Open Dublin,FIP Silver,8,Round of 16,Theodore Garton / Cameron Dollimore,Antonio Fernandez / Pedro Melendez Amaya,3-6 · 4-6,Antonio Fernandez / Pedro Melendez Amaya,,2,finished,men
+2026-07-18,FIP Silver Hiscox Padel Irish Open Dublin,FIP Silver,4,Quarter,Matteo Rosingana / Simone Vaccari,Adrian Ronco Lopez / Pepe Aliaga,3-6 · 3-6,Adrian Ronco Lopez / Pepe Aliaga,,2,finished,men
+2026-07-18,FIP Silver Hiscox Padel Irish Open Dublin,FIP Silver,4,Quarter,Diego Dorta Diaz / Alfonso Sanchez Arriaga,Guillem Figuerola Santiago / Roberto Belmont Pastor,6-3 · 6-2,Diego Dorta Diaz / Alfonso Sanchez Arriaga,,2,finished,men
+2026-07-18,FIP Silver Hiscox Padel Irish Open Dublin,FIP Silver,4,Quarter,Anton Sans / Gustavo Nunes,Mathias Gonzalez Lambert / Andres Martinez Cuquerella,6-2 · 6-1,Anton Sans / Gustavo Nunes,,2,finished,men
+2026-07-18,FIP Silver Hiscox Padel Irish Open Dublin,FIP Silver,4,Quarter,Victor Tur Checa / Agustin Reca,Antonio Fernandez / Pedro Melendez Amaya,2-6 · 4-6,Antonio Fernandez / Pedro Melendez Amaya,,2,finished,men
+2026-07-17,-,-,4,Quarter,Agustin Tapia / Arturo Coello,Edu Alonso / Aimar Goñi,6(5)-7 · 6-1 · 6-4,Agustin Tapia / Arturo Coello,97.0,3,finished,men
+2026-07-17,-,-,4,Quarter,Martin Di Nenno / Francisco Navarro,Franco Stupaczuk / Miguel Yanguas,7-5 · 6-3,Martin Di Nenno / Francisco Navarro,86.0,2,finished,men
+2026-07-17,-,-,4,Quarter,Juan Lebron / Leo Augsburger,Momo Gonzalez / Lucas Campagnolo,6-3 · 6-2,Juan Lebron / Leo Augsburger,75.0,2,finished,men
+2026-07-17,-,-,4,Quarter,Javier Leal / Francisco Guerrero,Federico Chingotto / Alejandro Galan,3-6 · 6(5)-7,Federico Chingotto / Alejandro Galan,94.0,2,finished,men
+2026-07-17,FIP Silver Hiscox Padel Irish Open Dublin,FIP Silver,16,Round of 32,Florian Valsot / Kilian Jordan,Arthur Hugounenq / Yanis Muesser,6-7 · 1-6,Arthur Hugounenq / Yanis Muesser,,2,finished,men
+2026-07-17,FIP Silver Hiscox Padel Irish Open Dublin,FIP Silver,16,Round of 32,Julien Biron / Thomas Basso,Adrian Ronco Lopez / Pepe Aliaga,0-6 · 3-6,Adrian Ronco Lopez / Pepe Aliaga,,2,finished,men
+2026-07-17,FIP Silver Hiscox Padel Irish Open Dublin,FIP Silver,16,Round of 32,Nathan Courrin / Thomas Seux,Guillem Figuerola Santiago / Roberto Belmont Pastor,4-6 · 4-6,Guillem Figuerola Santiago / Roberto Belmont Pastor,,2,finished,men
+2026-07-17,FIP Silver Hiscox Padel Irish Open Dublin,FIP Silver,16,Round of 32,Rafael Marquet / Benjamin Dufour,Antonio Fernandez / Pedro Melendez Amaya,2-6 · 0-6,Antonio Fernandez / Pedro Melendez Amaya,,2,finished,men
+2026-07-16,-,-,8,Round of 16,Arturo Coello / Agustin Tapia,Tolito Aguirre / Alejandro Arroyo,6-4 · 6-4,Arturo Coello / Agustin Tapia,75.0,2,finished,men
+2026-07-16,-,-,8,Round of 16,Edu Alonso / Aimar Goñi,Jorge Nieto / Jon Sanz,6-3 · 3-6 · 6-3,Edu Alonso / Aimar Goñi,106.0,3,finished,men
+2026-07-16,-,-,8,Round of 16,Martin Di Nenno / Francisco Navarro,Alonso Rodriguez Martinez / Juan Ignacio De Pascual,6-1 · 6-4,Martin Di Nenno / Francisco Navarro,81.0,2,finished,men
+2026-07-16,-,-,8,Round of 16,Javier Garrido / Lucas Bergamini,Franco Stupaczuk / Miguel Yanguas,2-6 · 1-1,Franco Stupaczuk / Miguel Yanguas,42.0,2,retired,men
+2026-07-16,-,-,8,Round of 16,Juan Lebron / Leo Augsburger,Sanyo Gutierrez / Maxi Sanchez Blasco,6-4 · 6-4,Juan Lebron / Leo Augsburger,64.0,2,finished,men
+2026-07-16,-,-,8,Round of 16,Jose Jimenez / Javier Garcia,Lucas Campagnolo / Momo Gonzalez,0-6 · 0-6,Lucas Campagnolo / Momo Gonzalez,48.0,2,finished,men
+2026-07-16,-,-,8,Round of 16,Francisco Guerrero / Javier Leal,Jose Antonio Diestro / Ignacio Piotto,6-1 · 6-2,Francisco Guerrero / Javier Leal,51.0,2,finished,men
+2026-07-16,-,-,8,Round of 16,Juan Tello / Maximiliano Arce,Alejandro Galan / Federico Chingotto,2-6 · 3-6,Alejandro Galan / Federico Chingotto,68.0,2,finished,men
+2026-07-16,FIP Silver Hiscox Padel Irish Open Dublin,FIP Silver,16,Round of 32,Javier Antonio Cincotta / Ivan Ignacio Herrera,Chris Salisbury / Alfonso Patacho,2-6 · 2-6,Chris Salisbury / Alfonso Patacho,,2,finished,men
+2026-07-16,FIP Silver Hiscox Padel Irish Open Dublin,FIP Silver,16,Round of 32,Oliver Jacobson / Oscar Jacobson,Brian Condren / Harry Bingham,6-4 · 6-2,Oliver Jacobson / Oscar Jacobson,,2,finished,men
+2026-07-16,FIP Silver Hiscox Padel Irish Open Dublin,FIP Silver,16,Round of 32,Louis Jover / Hamza Berrahou,Theodore Garton / Cameron Dollimore,1-6 · 0-6,Theodore Garton / Cameron Dollimore,,2,finished,men
+2026-07-15,-,-,16,Round of 32,Agustin Tapia / Arturo Coello,David Gala / Enzo Jensen,6-3 · 6-2,Agustin Tapia / Arturo Coello,62.0,2,finished,men
+2026-07-15,-,-,16,Round of 32,Pablo Garcia Rodrigo / Pablo Lijo,Tolito Aguirre / Alejandro Arroyo,3-6 · 3-6,Tolito Aguirre / Alejandro Arroyo,79.0,2,finished,men
+2026-07-15,-,-,16,Round of 32,Edu Alonso / Aimar Goñi,Luciano Capra / Luis Hernandez,6-4 · 6-3,Edu Alonso / Aimar Goñi,76.0,2,finished,men
+2026-07-15,-,-,16,Round of 32,Martin Di Nenno / Francisco Navarro,Juan Zamora Perez / Pablo Sanchez Vicente,6-2 · 6-2,Martin Di Nenno / Francisco Navarro,76.0,2,finished,men
+2026-07-15,-,-,16,Round of 32,Jose Solano Marmolejo / Ramiro Pereyra,Franco Stupaczuk / Miguel Yanguas,2-6 · 4-6,Franco Stupaczuk / Miguel Yanguas,85.0,2,finished,men
+2026-07-15,-,-,16,Round of 32,Juan Lebron / Leo Augsburger,Marc Sintes Villalonga / Daniel Santigosa,6-3 · 6-4,Juan Lebron / Leo Augsburger,77.0,2,finished,men
+2026-07-15,-,-,16,Round of 32,Jose Antonio Diestro / Ignacio Piotto,Gonzalo Alfonso / Javier Barahona,6-3 · 4-6 · 7-5,Jose Antonio Diestro / Ignacio Piotto,132.0,3,finished,men
+2026-07-15,-,-,16,Round of 32,Denis Tomas Perino / Facundo Dominguez,Alejandro Galan / Federico Chingotto,0-6 · 3-6,Alejandro Galan / Federico Chingotto,56.0,2,finished,men
+2026-07-14,-,-,16,Round of 32,Enrique Goenaga / Manuel Castaño,Jorge Nieto / Jon Sanz,4-6 · 3-6,Jorge Nieto / Jon Sanz,79.0,2,finished,men
+2026-07-14,-,-,16,Round of 32,Alonso Rodriguez Martinez / Juan Ignacio De Pascual,Jairo Bautista / Inigo Jofre,7-6(6) · 6-3,Alonso Rodriguez Martinez / Juan Ignacio De Pascual,83.0,2,finished,men
+2026-07-14,-,-,16,Round of 32,Javier Garrido / Lucas Bergamini,Miguel Benitez / Aris Patiniotis,4-6 · 6-4 · 6-2,Javier Garrido / Lucas Bergamini,139.0,3,finished,men
+2026-07-14,-,-,16,Round of 32,Sanyo Gutierrez / Maxi Sanchez Blasco,Juanlu Esbri / Alex Ruiz,7-6(3) · 6-4,Sanyo Gutierrez / Maxi Sanchez Blasco,89.0,2,finished,men
+2026-07-14,-,-,16,Round of 32,Javier Garcia / Jose Jimenez,Dylan Guichard / Clement Geens,6-4 · 6-2,Javier Garcia / Jose Jimenez,79.0,2,finished,men
