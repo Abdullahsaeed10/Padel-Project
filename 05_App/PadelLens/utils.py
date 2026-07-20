@@ -150,18 +150,9 @@ def render_demo_badge():
     """
     if not db.is_demo_user():
         return
-    t = get_theme()
-    st.markdown(
-        f"""
-        <span style="display:inline-block; padding:3px 10px; border-radius:12px;
-                    background:{t['bad_bg']}; border:1px solid {t['bad_br']};
-                    color:{t['bad_fg']}; font-size:11px; font-weight:700;
-                    letter-spacing:0.5px;">
-            SYNTHETIC DEMO DATA
-        </span>
-        """,
-        unsafe_allow_html=True,
-    )
+    # Discreet one-line disclosure (replaces the former red badge): keeps the
+    # academic-honesty requirement without dominating the page visually.
+    st.caption("Demo dataset for illustration")
 
 
 # ---------------------------------------------------------------------------
