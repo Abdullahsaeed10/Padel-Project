@@ -1,0 +1,280 @@
+elo_rank,player,elo,n_matches,official_points
+1,Agustin Tapia,1895.4,50,21409.0
+2,Arturo Coello,1895.4,50,21409.0
+3,Federico Chingotto,1824.8,51,17677.0
+4,Alejandro Galan,1824.8,51,17677.0
+5,Paula Josemaria Martin,1788.5,41,13897.0
+6,Beatriz Gonzalez Fernandez,1788.5,41,14894.0
+7,Gemma Triay Pons,1749.8,46,17689.0
+8,Delfina Brea Senesi,1749.8,46,17689.0
+9,Andrea Ustero Prieto,1730.3,39,9360.0
+10,Ariana Sanchez Fallada,1730.3,39,13237.0
+11,Leo Augsburger,1700.4,40,7077.0
+12,Juan Lebron,1700.4,40,7665.0
+13,Tamara Icardo Alcorisa,1673.7,34,6797.0
+14,Claudia Jensen,1673.7,34,6062.0
+15,Francisco Navarro,1656.9,33,5804.0
+16,Franco Stupaczuk,1652.9,37,6840.0
+17,Miguel Yanguas,1652.9,37,6934.0
+18,Jorge Nieto,1639.0,32,5869.0
+19,Lucas Campagnolo,1629.7,29,3104.0
+20,Francisco Guerrero,1629.4,30,4509.0
+21,Jon Sanz,1623.8,33,5067.0
+22,Juan Tello,1608.5,28,3154.0
+23,Martin Di Nenno,1606.7,30,4977.0
+24,Claudia Fernandez Sanchez,1591.5,30,11544.0
+25,Sofia Araujo,1591.5,30,7017.0
+26,Martina Calvo Santamaria,1586.2,31,5149.0
+27,Marta Ortega Gallego,1586.2,31,6197.0
+28,Giulia Dal Pozzo,1584.0,26,2085.0
+29,Nuria Rodriguez,1584.0,26,2424.0
+30,Edu Alonso,1572.4,29,3152.0
+31,Momo Gonzalez,1571.5,28,4307.0
+32,Carmen Goenaga Garcia,1565.6,27,3087.0
+33,Beatriz Caldera Sanchez,1565.6,27,3087.0
+34,Jairo Bautista,1565.4,28,2409.0
+35,Juan Ignacio De Pascual,1557.9,16,1149.0
+36,Alonso Rodriguez Martinez,1557.9,16,1186.0
+37,Maximiliano Arce,1557.6,24,2343.0
+38,Lucas Bergamini,1554.8,24,3804.0
+39,Javier Garrido,1554.8,24,3077.0
+40,Enzo Jensen,1543.0,18,1240.0
+41,Marina Guinart,1539.9,25,4049.0
+42,Raquel Eugenio Barrera,1538.2,16,2614.0
+43,Luis Hernandez,1533.9,18,1291.0
+44,Javier Garcia,1528.5,20,2544.0
+45,Claudia Escacena Montero,1521.7,3,937.0
+46,Patricia Martinez Fortun,1521.7,3,1197.0
+47,Alejandra Alonso De Villa,1521.0,24,4659.0
+48,Martina Fassio Goyeneche,1518.0,17,2664.0
+49,Alex Chozas,1516.0,22,2209.0
+50,Tino Libaak,1516.0,22,1608.0
+51,Carolina Orsi,1514.9,12,2149.0
+52,Aimar Goñi,1514.4,25,1747.0
+53,Mario Del Castillo,1512.8,9,1106.0
+54,Manuel Castaño,1511.6,17,1049.0
+55,Ignacio Piotto,1511.4,14,1209.0
+56,Veronica Virseda,1509.0,25,4444.0
+57,Victoria Iglesias Segador,1506.2,19,2924.0
+58,Jose Antonio Diestro,1501.7,22,1509.0
+59,Jessica Castello Lopez,1501.0,22,2314.0
+60,Fabricio Ivan Peiron,1499.7,2,118.0
+61,Santiago Rolla,1499.7,2,180.0
+62,Nacho Vilariño,1497.8,10,946.0
+63,Aida Martinez Sanjuan,1496.8,4,816.0
+64,Maria Portillo Perez,1495.7,2,637.0
+65,Ramiro Valenzuela,1493.7,10,855.0
+66,Marc Sintes Villalonga,1492.9,14,1120.0
+67,Daniel Santigosa,1492.9,14,1051.0
+68,Lorena Rufo Ortiz,1492.7,22,2314.0
+69,Noa Canovas Paredes,1492.7,16,1849.0
+70,Miguel Benitez,1492.6,7,281.0
+71,Alex Ruiz,1492.4,23,2549.0
+72,Juanlu Esbri,1492.4,23,2300.0
+73,Alejandra Salazar Bengoechea,1492.0,24,4904.0
+74,Carla Mesa Salazar,1492.0,3,825.0
+75,Jose Luis Gonzalez,1491.6,9,968.0
+76,Mariano Agustin Gonzalez San Martin,1491.4,9,959.0
+77,Jose Solano Marmolejo,1490.5,3,454.0
+78,Juan Zamora Perez,1490.1,3,436.0
+79,Javier Martinez,1490.1,15,1230.0
+80,Marta Talavan,1489.5,21,1414.0
+81,Clement Geens,1489.5,5,757.0
+82,Rodrigo Coello Manso,1488.6,3,563.0
+83,Pablo Sanchez Vicente,1488.4,3,497.0
+84,Enrique Goenaga,1487.5,16,1095.0
+85,Ariadna Cañellas Rodero,1487.2,7,883.0
+86,Anna Cortiles,1486.9,1,200.0
+87,Agustin Gutierrez,1486.5,7,752.0
+88,Salvador Oria,1486.5,7,714.0
+89,Patricia Llaguno Zielinski,1486.4,16,2692.0
+90,Alejandro Arroyo,1485.9,20,2237.0
+91,Georges Wakim,1485.3,1,177.0
+92,Aly Zaghloul,1485.3,1,95.0
+93,Brittany Dubins,1485.3,1,635.0
+94,Marta Morga Alonso,1485.3,1,73.0
+95,Yoan Boronad,1485.0,1,302.0
+96,Chris Humphreys,1484.7,1,22.0
+97,Felipe Osses Konig,1484.7,1,22.0
+98,Johan Bergeron,1484.6,1,310.0
+99,Ferran Insa Sotillo,1484.5,1,528.0
+100,Isaac Huysveld,1484.4,1,153.0
+101,Pedro Perry,1484.3,1,374.0
+102,Pablo Francisco Amora Hernandez,1484.1,1,103.0
+103,Pablo Acevedo Iturribarria,1484.1,1,95.0
+104,Fran Ramirez Navas,1484.0,1,424.0
+105,Alvaro Lopez Campos,1484.0,1,85.0
+106,Alanoud Yamani,1484.0,1,69.0
+107,Omar Althagib,1484.0,1,22.0
+108,Areej Khalil Fareh,1484.0,1,61.0
+109,Rafael Mendez,1484.0,1,454.0
+110,Nawaf Alkadi,1484.0,1,22.0
+111,Faisal Alrebdi,1484.0,1,22.0
+112,Abdulrahman Alazzam,1484.0,1,22.0
+113,Coral Alvarez Castro,1484.0,1,199.0
+114,Natividad Lopez Diaz,1484.0,1,791.0
+115,Ainize Santamaria Landa,1484.0,1,473.0
+116,Ali Alburayh,1484.0,1,22.0
+117,Sattam Alshahrani,1484.0,1,25.0
+118,Camila Ramme Coellar,1484.0,1,636.0
+119,Ana Maria Cabrejas Ruiz,1484.0,1,213.0
+120,Catherine Rose,1483.9,1,451.0
+121,Lucia Perez Parra,1483.9,1,464.0
+122,David Gala,1483.9,20,2084.0
+123,Sandra Bellver Fructuoso,1483.7,5,849.0
+124,Juan Cruz Forastello,1483.7,1,192.0
+125,Jose Rico,1483.7,1,396.0
+126,Ana Cristina Sanchez Perez,1483.6,1,411.0
+127,Marcella Koek,1483.6,1,699.0
+128,Elyne Boeykens,1483.6,1,180.0
+129,Justine Pysson,1483.6,1,225.0
+130,Maximo Jesus Maldonado,1483.5,1,471.0
+131,Bastien Blanque,1483.3,3,254.0
+132,Natalia Molinilla Paniagua,1483.3,1,360.0
+133,Maria Teresa Moriñigo Gomez,1483.3,1,477.0
+134,Nicholas Agritelley,1483.3,1,52.0
+135,Vinny Nahuel Di Francesco,1483.3,1,186.0
+136,Mohamed El Garhy,1483.3,1,61.0
+137,Mohamed Aboulkassem,1483.3,1,44.0
+138,Matias Segura,1483.2,1,89.0
+139,Aaron Segura,1483.2,1,22.0
+140,Jose Pablo Padilla,1483.2,1,133.0
+141,Diego Arredondo Garcia,1483.2,1,349.0
+142,Álvaro Melendez Amaya,1483.1,7,903.0
+143,Emilio Sanchez,1483.0,1,749.0
+144,Juan Pablo Dametto,1482.9,1,467.0
+145,Felipe Calleja,1482.9,1,422.0
+146,Samuel Rivas Garcia,1482.9,1,248.0
+147,Alfonso Sanchez Arriaga,1482.9,1,478.0
+148,Gianina Minieri,1482.8,1,80.0
+149,Fiorella Agostina Propato San Martin,1482.8,1,74.0
+150,Francisco Cabeza Teres,1482.7,10,1055.0
+151,Monica Gomez Rivas,1482.6,1,731.0
+152,Mario Ortega,1482.6,10,1052.0
+153,Facundo Dehnike,1482.6,1,163.0
+154,Marcel Font,1482.6,1,268.0
+155,Moura Hakim,1482.6,1,115.0
+156,Laila El Nimr,1482.6,1,115.0
+157,Julian Lacamoire,1482.6,1,400.0
+158,Adrian Ronco Lopez,1482.6,1,410.0
+159,Adrian Naranjo Martinez,1482.6,1,459.0
+160,Xenia Clasca Vidiella,1482.5,1,477.0
+161,Antonio Graupera,1482.3,1,116.0
+162,Mirko Kloster,1482.3,1,32.0
+163,Giulio Graziotti,1482.2,1,388.0
+164,Simone Iacovino,1482.2,1,362.0
+165,Clarissa Margherita Aima,1482.1,1,526.0
+166,Noa Bonnefoy,1482.0,1,167.0
+167,Michele Brambilla,1482.0,1,134.0
+168,Sara Errani,1482.0,1,70.0
+169,Pedro Melendez Amaya,1482.0,3,685.0
+170,Christian Fuster,1481.9,1,334.0
+171,Miguel Angel Solbes,1481.9,1,282.0
+172,Santino Contreras,1481.8,1,232.0
+173,Naim Horacio Diaz,1481.8,1,145.0
+174,Sara Foguer Lapuente,1481.3,1,244.0
+175,Eugenia Guimet Bigas,1481.3,1,459.0
+176,Facundo Rodrigo Luis Lopez,1481.3,3,660.0
+177,Victor Mena,1481.2,1,707.0
+178,Daniela Banchero,1480.6,1,100.0
+179,Irene Jimenez,1480.6,1,100.0
+180,Javier Valdes,1479.9,6,838.0
+181,Renzo Gabriel Nuñez,1479.9,6,486.0
+182,Maria Laura Ferreyra,1479.8,3,588.0
+183,Aranzazu Osoro Ulrich,1479.3,19,3049.0
+184,Luciano Capra,1479.2,12,894.0
+185,Marina Lobo,1478.6,10,1284.0
+186,Inigo Jofre,1477.9,23,1949.0
+187,Pol Hernandez,1477.5,24,1954.0
+188,Guillermo Collado,1477.5,24,1915.0
+189,Lara Arruabarrena,1477.0,10,1301.0
+190,Carmen Castillon Gamez,1476.6,3,352.0
+191,Maria Eulalia Rodriguez Abajo,1476.5,17,1849.0
+192,Pablo Lijo,1475.3,23,1456.0
+193,Ramiro Pereyra,1475.2,4,499.0
+194,Javier Leal,1472.4,18,3194.0
+195,Adam Axelsson,1472.2,4,552.0
+196,Manuel Aragon Herrera,1472.1,4,528.0
+197,Tolito Aguirre,1471.7,21,2164.0
+198,Marta Barrera De La Fuente,1471.2,18,2144.0
+199,Maxi Sanchez Blasco,1471.0,20,1770.0
+200,Ana Dominguez Gracia,1470.9,4,783.0
+201,Sanyo Gutierrez,1470.1,20,2094.0
+202,Marcos Gonzalez Blanco,1469.9,2,711.0
+203,Timeo Fonteny,1469.6,2,389.0
+204,Marta Arellano Navarro,1469.6,2,831.0
+205,Marco Cassetta,1469.4,2,672.0
+206,Melania Merino Saez,1469.3,4,1228.0
+207,Ignacio Archieri,1468.9,2,426.0
+208,Federico Chiostri,1468.7,2,350.0
+209,Mario Huete,1468.2,4,732.0
+210,Facundo Dominguez,1467.9,9,900.0
+211,Raquel Piltcher,1467.8,6,835.0
+212,Caterina Maria Baldi,1467.4,2,593.0
+213,Carlotta Casali,1467.2,2,702.0
+214,Alberto Garcia Trabanco,1466.3,2,519.0
+215,Martina Parmigiani,1466.2,2,449.0
+216,Amanda Lopez Moral,1466.1,4,943.0
+217,Jimena Velasco Postiguillo,1465.7,18,2184.0
+218,Franco Dal Bianco,1465.5,2,551.0
+219,Antonio Fernandez,1465.2,7,1039.0
+220,Victoria Kurz,1464.9,2,734.0
+221,Araceli Martinez,1463.6,12,1741.0
+222,Lorena Vano,1463.3,2,630.0
+223,Javier Barahona,1463.2,18,2319.0
+224,Lucia Peralta Exposito,1462.1,6,720.0
+225,Francisco Gil,1462.0,13,1128.0
+226,Camila Fassio Goyeneche,1461.6,4,752.0
+227,Pablo Garcia Rodrigo,1460.9,22,1721.0
+228,Sofia Saiz Vallejo,1460.4,21,1354.0
+229,Daiara Agustina Valenzuela,1459.2,9,1037.0
+230,Letizia Maria Manquillo Alarza,1459.1,9,1359.0
+231,Aris Patiniotis,1458.9,7,877.0
+232,Dylan Guichard,1458.1,9,699.0
+233,Thomas Leygue,1457.1,3,290.0
+234,Julia Polo Bautista,1456.8,5,1244.0
+235,Albert Roglan Pons,1456.6,5,635.0
+236,Pablo Cardona,1455.4,3,931.0
+237,Ksenia Sharifova,1455.4,16,1704.0
+238,Jose Jimenez,1454.7,18,2019.0
+239,Miguel Deus,1453.4,3,747.0
+240,Carla Touly,1453.1,3,607.0
+241,Flavio Abbate,1453.0,8,1060.0
+242,Alvaro Montiel Caruso,1453.0,8,976.0
+243,Andres Fdz Lancha,1451.2,12,1038.0
+244,Agustin Torre,1450.2,10,1135.0
+245,Denis Tomas Perino,1450.1,10,1050.0
+246,Gonzalo Alfonso,1450.1,19,2081.0
+247,Barbara Las Heras,1447.3,6,957.0
+248,Alvaro Cepero,1446.4,12,1270.0
+249,Federico Mouriño,1445.4,10,916.0
+250,Marc Quilez,1445.4,10,997.0
+251,Lucia Sainz Pelegri,1445.0,16,2712.0
+252,Santiago Jose Pineda Cabello,1444.4,6,599.0
+253,Diego Garcia Garcia,1444.4,6,798.0
+254,Lea Godallier,1444.0,12,1181.0
+255,Teodoro Zapata,1440.1,6,835.0
+256,Noemi Aguilar Carrillo,1440.0,10,1375.0
+257,Arnau Ayats,1439.4,6,425.0
+258,Giorgia Marchetti,1439.3,12,1133.0
+259,Martin Abud,1438.1,4,657.0
+260,Miguel Lamperti,1435.8,4,765.0
+261,Maxi Sanchez,1430.4,10,1022.0
+262,Laura Lujan Rodriguez,1428.1,10,1377.0
+263,Teresa Navarro Lopez-Barajas,1427.7,14,1225.0
+264,Virginia Riera,1427.7,14,1704.0
+265,Victor Ruiz,1425.8,18,1581.0
+266,Ana Catarina Nogueira,1424.1,5,1249.0
+267,Nuno Deus,1423.5,5,875.0
+268,Juan Cruz Belluati,1422.6,10,830.0
+269,Alix Collombon,1421.7,15,1644.0
+270,Gonzalo Rubio,1419.1,14,1529.0
+271,Javier Ruiz,1417.0,14,1496.0
+272,Juan Ignacio Rubini,1415.4,8,977.0
+273,Marta Caparros Maldonado,1414.0,15,1464.0
+274,Julieta Evangelina Bidahorria,1414.0,15,1535.0
+275,Agueda Perez Ortiz,1413.4,15,1492.0
+276,Lucia Martinez Gomez,1413.4,15,1514.0
+277,Ignacio Sager,1392.6,10,928.0
+278,Jana Montes Cabruja,1384.4,15,1417.0
+279,Marta Borrero,1369.7,14,1328.0
