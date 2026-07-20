@@ -106,3 +106,20 @@ Most common set: **6-3** (399 times). A 6-0 set appears in **10.6%** of matches.
 ## B5. The five numbers to know absolutely cold
 
 86% / 49% (momentum & decider) · 40→68% (chemistry) · 78.5% & AUC 0.88 (ranking) · 22.4% (upsets, finals 50/50) · 43%, p=0.18 (no home advantage — the null you present with pride).
+
+
+---
+
+# PART C — Slide 15 spoken guide: the four statistical tools (what to say, why chosen, where formulas come from)
+
+**Header line (say on arrival):** "Before the findings, these are the four tools I used — always the same way: two-sided tests, alpha 0.05, a confidence interval on every percentage, and nothing under n=10 shown as a claim."
+
+**1. Wilson 95% CI.** A percentage from one season is an estimate; the CI is the plausible range for the true value (momentum: 83.6–88.5%). Formula is Wilson (1927): instead of centering error bars on the observed value (naive/Wald — breaks at small n, can pass 0% or 100%), it collects all true values a significance test would NOT reject; that is why the center term is p-hat + z²/2n. Chosen because my subgroups get small (Italy home n=17). Used via one unit-tested function on every percentage. Spoken: "p-hat plus z-squared over two-n, plus or minus z root of p-hat one-minus-p-hat over n plus z-squared over four-n-squared, all over one plus z-squared over n; z = 1.96."
+
+**2. Binomial test.** Exact test of one proportion vs a reference (50%). Comes straight from the binomial probability formula (n choose k · p^k · (1−p)^(n−k)) — no approximation. Chosen because my questions are literally "is 86% different from a coin flip?". Used for: momentum (p≈1e−98), favorites 78.5%, upsets 22.4% (below 50%), home advantage 43.1% (p=0.18, null).
+
+**3. Chi-square test.** "Are several win rates plausibly equal?" Compare observed counts O with expected-if-equal counts E: χ² = Σ(O−E)²/E (Pearson 1900); large values → unlikely equal → small p. Chosen as the standard homogeneity test for >2 groups. Used for: 4 chemistry buckets (p<0.001), rest-days levels (p=0.11, null).
+
+**4. Welch t-test.** Compares two MEANS: t = (x̄₁−x̄₂)/√(s₁²/n₁+s₂²/n₂). Student (1908) + Welch (1947), which drops the equal-variance assumption — the conservative default. Used for: upset vs normal durations (141 vs 89 min, p=0.024) and 3-set duration by level (p=0.61, null).
+
+**If asked "did you derive these?"** — "No; they are standard textbook tools. My contribution is selecting the right tool per question — one proportion: binomial; many groups: chi-square; two means: Welch — and validating the implementations with unit tests against known values."
